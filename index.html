@@ -1,292 +1,235 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Thirulok Sundar Mohanrasu</title>
-
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <style>
-          body {
-            font-family: Roboto, 'sans-serif';
-            font-size: 16px;
-            background-color: #FFFFFF;
-            color: #4F6071;
-          }
-          h1 {
-              font-weight: 300;
-              font-size: 2rem;
-          }
-          #header {
-            background-color: #b1c280;
-            /*background-color: #FFFFFF;*/
-            display: flex;
-            align-items: flex-end;
-            padding-top:60px;
-            padding-bottom:60px;
-          }
-          #footer {
-            background-color: #FFFFFF;
-            padding:60px;
-          }
-          #portrait {
-            border: 3px solid white;
-          }
-          #header-text {
-            margin-top: 60px;
-            margin-left: 220px;
-          }
-          #header-text-name {
-            font-size: 40px;
-          }
-          #header-text-title {
-              font-size: 17px;
-          }
-          #header-text-affiliation {
-              font-size: 17px;
-              margin-top: 10px;
-          }
-          #header-text-email {
-            margin-top: 10px;
-            font-size: 17px;
-            font-style: italic;
-          }
-          .header-text-desc {
-            font-size: 20px;
-          }
-          .vspace-top {
-            margin-top: 30px;
-          }
-          .vspace-top-news {
-              margin-top: 15px;
-          }
-          .paper-image {
-            width: 150px;
-          }
-          .news-date {
-              font-weight: bold;
-          }
-          .paper-title {
-            font-weight: bold;
-          }
-          .paper-authors {
-            font-style: italic;
-          }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thirulok Sundar Mohan Rasu | Robotics & Computer Vision Researcher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div id='header'>
-        <div class='container'>
-            <div class='row'>
-                <div class="col-sm-3 offset-sm-1">
-                    <img src='media/thiru.jpg' class='img-fluid' id='portrait'>
-                </div>
-
-                <div class="col">
-                  <div id='header-text-name'>
-                      Thirulok Sundar Mohanrasu
-                  </div>
-                    <div id='header-text-title'>
-                        Undergraduate Student</a>
-                    </div>
-                    <div id='header-text-affiliation'>
-                        Indian Institute of Technology (ISM) Dhanbad - <a href="https://ee.iitism.ac.in/"> Department of Electrical Engineering</a>
-                    </div>
-                  <div id='header-text-email'>
-                        email: thiruloksundar278 (at) gmail (dot) com
-                  </div>
-                  <div>
-                    <a href="https://github.com/Thiruloksundar">[GitHub]</a>
-                    <a href="https://linkedin.com/in/thirulok-sundar-mohanrasu">[LinkedIn]</a>
-                    <a href="docs/CV.pdf">[CV]</a>
-                  </div>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Thirulok Sundar</a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="docs/CV.pdf" class="nav-link" target="_blank">CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-    </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Thirulok Sundar Mohan Rasu</h1>
+                <p class="hero-subtitle">MS Student in Electrical & Computer Engineering</p>
+                <p class="hero-location">University of Michigan, Ann Arbor</p>
+                <div class="hero-links">
+                    <a href="mailto:thirulok@umich.edu" class="hero-link"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://github.com/Thiruloksundar" class="hero-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com/in/thirulok-sundar-mohanrasu" class="hero-link" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://scholar.google.com" class="hero-link" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="media/thiru.jpg" alt="Thirulok Sundar Mohan Rasu">
+            </div>
+        </div>
+    </section>
 
-    <div class='container'>
-        <div class='row vspace-top'>
-            <div class='col offset-sm-1'>
-                <h1>Bio</h1>
-                <p>
-                    I'm a final year student at Indian Institute of Technology (ISM) Dhanbad currently pursuing my bachelors in Electrical Engineering. My primary research interests lie at the intersection of computer vision and robotics. Perception is an essential component of any autonomous system, enabling it to understand its environment and make informed decisions to accomplish its tasks. Additionally, I am intrigued by the wide applications of language models, specifically in robotics. Currently, VLMs and LLMs have gained significant popularity, and I believe they can be used to plan complex robot tasks, help robots interpret instructions and interact with humans. To this end, I am keen to work on perception tasks that integrate environmental understanding and human interaction and leverage foundational models to enhance robots' ability to visualize their surroundings and execute tasks effectively.I have done many projects in computer vision, deep learning and have also worked on research projects related to them. Research, to me, means advancing the frontiers of human knowledge and I am excited about it. The prospect of finding something unknown to the world and having useful applications drives me. Robots are the future and the world is moving towards automation, I aim to be at the forefront of this move.
-			
-		    Apart from that, I am an avid reader who likes to get engrossed in fiction books and also dive into my world of deep thoughts on current-world issues and metaphysics. Always on the lookout for great collaborations! Please feel free to contact me at my email-id if you have any interesting ideas or for possible research projects.
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p class="intro-text">
+                    I am a Master's student in Electrical and Computer Engineering at the <strong>University of Michigan, Ann Arbor</strong>, where I work as a Research Assistant with <a href="#" target="_blank">Prof. Jeong Joon Park</a>. My research lies at the fascinating intersection of <strong>robotics, autonomous vehicles, and computer vision</strong>—areas that I believe will fundamentally reshape how machines perceive and interact with the world.
                 </p>
-
-                <div class='vspace-top'>
-                    <h1>Updates</h1>
-                </div>
-
-		<div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Jun 2024
-                    </div>
-  
-                    <div class="col">
-                      I am excited to start working as a research intern at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a> with <a href="https://arunbalajeev.github.io/">Dr. Arun Balajee Vasudevan</a>!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Jan 2024
-                    </div>
-  
-                    <div class="col">
-                      I will be joining as a research intern at <a href="https://www.crcv.ucf.edu/">CRCV lab - University of Central Florida</a> with <a href="https://www.crcv.ucf.edu/person/rawat/">Prof. Yogesh S Rawat.</a> Looking forward to a great learning experience!
-                    </div>
-                </div>
-                
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Oct 2023
-                    </div>
-  
-                    <div class="col">
-                      Started working on a research project on Traffic-Sign Detection and Recognition in Hazardous Conditions with <a href="https://ctech.iitd.ac.in/hanmandlu.html">Prof. Madasu Hanmandlu.</a>
-                    </div>
-                </div>
-  
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        March 2023
-                    </div>
-  
-                    <div class="col">
-                      I have started working as a Robotics Software intern at <a href="https://www.mowito.in/">Mowito.</a> Looking forward to a great summer!
-                    </div>
-                </div>
-
-                <div class='vspace-top'>
-                    <h1>Experiences and Selected Projects</h1>
-                </div>
-
-		<div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src="media/Sc1-1,2,3.png" class="img-fluid">
-                    </div>
-
-                    <div class="col">
-                        <div class='paper-title'>
-                            Project on Challenges in Multi-view 3D Scene Reconstruction 
-                        </div>
-                        <div class='paper-desc'>
-				Here is the link to my review - <a href="https://shorturl.at/c1xcE">Challenges in Multi-view 3D Scene Reconstruction</a>
-                        </div>
-                        <div class='paper-authors'>
-				Authors : Thirulok Sundar Mohanrasu
-                        </div>
-                    </div>
-                </div>
-
-		<div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src="media/CMU.png" class="img-fluid">
-                    </div>
-
-                    <div class="col">
-                        <div class='paper-title'>
-                            Research intern at Carnegie Mellon University 
-                        </div>
-                        <div class='paper-desc'>
-				Here is the link to our presentation - <a href="https://shorturl.at/c1xcE">Audio-FakeBench Presentation.</a> This is an older version of our ideas and objectives. We hope to submit our work to ICML 2025.
-			</div>
-                        <div class='paper-authors'>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src="media/ucf_logo.png" class="img-fluid">
-                    </div>
-
-                    <div class="col">
-                        <div class='paper-title'>
-                            Research intern in CRCV Lab at University of Central Florida 
-                        </div>
-                        <div class='paper-desc'>
-                        </div>
-                        <div class='paper-authors'>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src="media/traffic_sign.png" class="img-fluid">
-                    </div>
-
-                    <div class="col">
-                        <div class='paper-title'>
-                            Research intern at Indian Institute of Technology Delhi 
-                        </div>
-                        <div class='paper-desc'>
-			    Working on Traffic sign detection and recognition in hazardous conditions.
-                        </div>
-                        <div class='paper-authors'>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
-                            <source src="media/videoplayback.webm" type="video/webm">
-                        </video>
-                    </div>
-
-                    <div class="col">
-                        <div class='paper-title'>
-                            Robotics Software Intern at Mowito
-                        </div>
-                        <div class='paper-desc'>
-			    Worked in the vision and planogram teams and worked mainly in developing vision solutions for robots in warehouses.
-                        </div>
-                        <div class='paper-authors'>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src="media/object.jpg" class="img-fluid">
-                    </div>
-
-                    <div class="col">
-                        <div class='paper-title'>
-                            Object and Barcode Detection
-                        </div>
-                        <div class='paper-desc'>
-                            Used traditional OpenCV techniques to detect and read barcodes in items along with detecting items with bounding boxes.
-                        </div>
-                        <div>
-                            <a href="https://github.com/Thiruloksundar/Object_and_Barcode_detection">[Link to repo]</a>
-                        </div>
-                    </div>
-                </div>
-
+                <p>
+                    I'm driven by the challenge of enabling robots to truly <em>understand</em> their environments. From developing 4D perception systems to creating robust deepfake detection models, my work spans the spectrum of modern AI and robotics. I'm particularly passionate about leveraging <strong>foundational models</strong>, <strong>3D/4D reconstruction</strong>, and <strong>sensor fusion</strong> to build autonomous systems that can navigate complex, dynamic environments safely and intelligently.
+                </p>
+                <p>
+                    Before joining UMich, I completed my B.Tech in Electrical Engineering from <strong>IIT (ISM) Dhanbad</strong>, where I developed a strong foundation in machine learning and robotics. I've had the privilege of working with exceptional researchers at <strong>Carnegie Mellon University</strong> and the <strong>University of Central Florida</strong>, and contributed to real-world robotics solutions at <strong>Mowito</strong>.
+                </p>
+                <p>
+                    Beyond research, I'm an avid reader who enjoys diving into fiction and contemplating big questions about technology's role in society. I'm always excited to discuss ideas, collaborate on challenging problems, or explore new research directions—feel free to reach out!
+                </p>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Research Interests -->
+    <section id="research" class="section research-section">
+        <div class="container">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">🤖</div>
+                    <h3>Robot Perception</h3>
+                    <p>4D reconstruction, scene understanding, and developing perception systems that enable robots to make sense of complex environments</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">🚗</div>
+                    <h3>Autonomous Navigation</h3>
+                    <p>Motion planning, localization, SLAM, and sensor fusion for safe and efficient autonomous vehicle navigation</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">👁️</div>
+                    <h3>Computer Vision</h3>
+                    <p>3D/4D reconstruction, multi-view geometry, and visual learning for robotic applications</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">🧠</div>
+                    <h3>Foundational Models</h3>
+                    <p>Leveraging LLMs and VLMs for task planning, human-robot interaction, and multimodal understanding</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div id='footer' class='vspace-top'>
-    <div>
+    <!-- News Section -->
+    <section class="section news-section">
+        <div class="container">
+            <h2 class="section-title">Recent Updates</h2>
+            <div class="news-timeline">
+                <div class="news-item">
+                    <span class="news-date">Dec 2024</span>
+                    <p>Paper "Towards Content-Agnostic Deepfake Speech Detection with Multi-TTS" accepted to <strong>ICASSP 2025</strong>! 🎉</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Aug 2024</span>
+                    <p>Started MS in ECE at <strong>University of Michigan</strong> with a perfect 4.0 GPA</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Jan 2024</span>
+                    <p>Joined <strong>Carnegie Mellon University</strong> as a Research Intern working on deepfake audio detection</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Mar 2023</span>
+                    <p>Started Robotics Software Internship at <strong>Mowito</strong>, working on vision solutions for warehouse robots</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Research Assistant</h3>
+                            <p class="experience-org">University of Michigan, Ann Arbor</p>
+                        </div>
+                        <span class="experience-date">Aug 2025 – Present</span>
+                    </div>
+                    <p class="experience-desc">Working with Prof. Jeong Joon Park on creating 4D datasets for robot perception and learning, designing data collection pipelines and evaluation protocols.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Research Intern</h3>
+                            <p class="experience-org">Carnegie Mellon University</p>
+                        </div>
+                        <span class="experience-date">Jan 2024 – Sep 2025</span>
+                    </div>
+                    <p class="experience-desc">Worked with Dr. Arun Balajee Vasudevan on content-agnostic deepfake speech detection. Developed benchmark datasets using multiple TTS models and trained audio-language detection models. Published paper to ICASSP 2025.</p>
+                    <div class="experience-tags">
+                        <span class="tag">Audio ML</span>
+                        <span class="tag">Deepfake Detection</span>
+                        <span class="tag">PyTorch</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Research Intern</h3>
+                            <p class="experience-org">University of Central Florida - CRCV Lab</p>
+                        </div>
+                        <span class="experience-date">Feb 2024 – Dec 2024</span>
+                    </div>
+                    <p class="experience-desc">Worked with Prof. Yogesh Rawat on mitigating activity hallucinations in Video-LLMs. Created annotated datasets and fine-grained evaluation metrics for robust activity understanding.</p>
+                    <div class="experience-tags">
+                        <span class="tag">Video-LLMs</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Dataset Creation</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Robotics Software Intern</h3>
+                            <p class="experience-org">Mowito</p>
+                        </div>
+                        <span class="experience-date">Mar 2023 – Jul 2023</span>
+                    </div>
+                    <p class="experience-desc">Implemented perceptual-hashing for dataset deduplication and built production-ready dataset classes. Developed order-completion time estimation and clustering algorithms for warehouse optimization.</p>
+                    <div class="experience-tags">
+                        <span class="tag">Robotics</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Production Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section projects-preview-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Robot Localization with Kalman & Particle Filters</h3>
+                    <p>Implemented and compared Kalman and Particle filters on PR2 robot under five different scenarios, studying their advantages and limitations</p>
+                    <a href="https://github.com/Thiruloksundar" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Autonomous Mobile Robot Navigation</h3>
+                    <p>Complete autonomous navigation system using ROS2 and Nav2 stack with real-time lidar-based obstacle detection and collision avoidance</p>
+                    <a href="https://github.com/Thiruloksundar" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Challenges in Multi-view 3D Scene Reconstruction</h3>
+                    <p>Analyzed failure cases of MASt3R for multi-view reconstruction under challenging conditions and documented limitations</p>
+                    <a href="#" class="project-link" target="_blank">Read Paper →</a>
+                </div>
+            </div>
+            <div class="cta-center">
+                <a href="projects.html" class="btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Thirulok Sundar Mohan Rasu. Last updated: January 2025</p>
+            <div class="footer-links">
+                <a href="mailto:thirulok@umich.edu"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Thiruloksundar" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/thirulok-sundar-mohanrasu" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scl/script.js"></script>
 </body>
-
 </html>
