@@ -19,7 +19,8 @@
                 <li><a href="index.html#experience" class="nav-link">Experience</a></li>
                 <li><a href="projects.html" class="nav-link active">Projects</a></li>
                 <li><a href="publications.html" class="nav-link">Publications</a></li>
-                <li><a href="docs/CV.pdf" class="nav-link" target="_blank">CV</a></li>
+                <li><a href="docs/CV.pdf" class="nav-link" target="_blank">Resume</a></li>
+                <li><a href="docs/UM_transcript.pdf" class="nav-link" target="_blank">Transcript</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -33,115 +34,182 @@
     <section class="page-header">
         <div class="container">
             <h1>Projects</h1>
-            <p>A collection of my work in robotics, computer vision, and machine learning</p>
+            <p>Research in physics-based modeling, machine learning, and computational methods</p>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section class="section">
         <div class="container">
-            <!-- Robotics Projects -->
-            <div class="category-section">
+            <!-- Physics-Based Modeling -->
+            <div class="category-section" id="eis-modeling">
                 <h2 class="category-title">
-                    <span class="category-icon">🤖</span> Robotics & Autonomous Systems
+                    <span class="category-icon"><i class="fas fa-atom" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Physics-Based Modeling & Optimization
                 </h2>
-                
-                <div class="project-detailed">
-                    <div class="project-detailed-header">
-                        <h3>Robot Localization with Kalman and Particle Filters</h3>
-                        <a href="https://github.com/Thiruloksundar" class="github-link" target="_blank">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                    <p class="project-description">
-                        Implemented and compared Extended Kalman Filter (EKF) and Particle Filter algorithms for robot localization on the PR2 robot. Tested under five different challenging scenarios with complex paths to study advantages and limitations of each approach. Analyzed performance in terms of accuracy, computational efficiency, and robustness to sensor noise.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">ROS</span>
-                        <span class="tech-badge">Kalman Filters</span>
-                        <span class="tech-badge">Particle Filters</span>
-                        <span class="tech-badge">State Estimation</span>
-                    </div>
-                </div>
 
                 <div class="project-detailed">
                     <div class="project-detailed-header">
-                        <h3>Autonomous Mobile Robot Navigation System</h3>
-                        <a href="https://github.com/Thiruloksundar" class="github-link" target="_blank">
-                            <i class="fab fa-github"></i> View on GitHub
+                        <h3>Degradation-Constrained Optimization of SEI Parameters from EIS Using a Hybrid Physics-Based Model</h3>
+                        <a href="Hybrid_Physics_model_for_EIS.pdf" class="github-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Paper Draft
                         </a>
                     </div>
                     <p class="project-description">
-                        Developed a complete autonomous navigation system for a differential-drive mobile robot using ROS2 and the Nav2 navigation stack. Implemented real-time obstacle detection and collision avoidance in C++ by processing lidar data, enabling safe navigation in dynamic environments. Integrated SLAM for mapping and localization.
+                        Developed a hybrid EIS model that couples a physics-based transmission-line SEI impedance formulation with a compact equivalent circuit model (ECM). The model extracts physically meaningful parameters &mdash; SEI thickness (L<sub>SEI</sub>), diffusion coefficient (D<sub>SEI</sub>), ionic conductivity (&sigma;<sub>SEI</sub>), CPE capacitance, and ohmic resistance &mdash; from experimental Nyquist spectra. A key contribution is the embedding of <strong>degradation-aware constraints</strong> into the Differential Evolution (DE) optimizer, enforcing that L<sub>SEI</sub> and R<sub>0</sub> monotonically increase from beginning-of-life (BOL) to end-of-life (EOL), consistent with established electrochemical aging theory. A multi-SOC fitting strategy reduces free parameters from 6 to 2&ndash;3 per fit. Validated across 6 commercial Li-ion cells at multiple SOC levels, yielding <strong>1.7% mean absolute percentage error</strong> over 117 EIS spectra. OAT sensitivity analysis quantifies the relative importance of each SEI parameter.
                     </p>
+                    <p class="project-description" style="margin-top: -0.5rem;">
+                        <em>Collaborators: Jiawei Zhang, Prof. Ziyou Song &mdash; Electric Vehicle Center, University of Michigan</em>
+                    </p>
+                    <!-- Poster -->
+                    <div style="margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 0.75rem; color: var(--text-primary);">EVC Symposium 2026 Poster</h4>
+                        <div style="text-align: center; background: var(--bg-color); padding: 1rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                            <object data="docs/EVC_Symposium_2026_poster.pdf" type="application/pdf" width="100%" height="600" style="border-radius: var(--radius-md);">
+                                <p>Your browser does not support embedded PDFs. <a href="docs/EVC_Symposium_2026_poster.pdf" target="_blank">Download the poster</a>.</p>
+                            </object>
+                            <div style="margin-top: 0.75rem;">
+                                <a href="docs/EVC_Symposium_2026_poster.pdf" download class="pub-link" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                                    <i class="fas fa-download"></i> Download Poster (PDF)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="project-tech">
-                        <span class="tech-badge">ROS2</span>
-                        <span class="tech-badge">Nav2</span>
-                        <span class="tech-badge">C++</span>
-                        <span class="tech-badge">Lidar</span>
-                        <span class="tech-badge">SLAM</span>
-                        <span class="tech-badge">Path Planning</span>
+                        <span class="tech-badge">Physics-Based Modeling</span>
+                        <span class="tech-badge">Differential Evolution</span>
+                        <span class="tech-badge">EIS</span>
+                        <span class="tech-badge">Li-ion Batteries</span>
+                        <span class="tech-badge">Constrained Optimization</span>
+                        <span class="tech-badge">Sensitivity Analysis</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Computer Vision Projects -->
-            <div class="category-section">
+            <!-- Computational EM -->
+            <div class="category-section" id="cyscat">
                 <h2 class="category-title">
-                    <span class="category-icon">👁️</span> Computer Vision & 3D Reconstruction
+                    <span class="category-icon"><i class="fas fa-wave-square" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Computational Electromagnetics
                 </h2>
-                
+
                 <div class="project-detailed">
                     <div class="project-detailed-header">
-                        <h3>Challenges in Multi-view 3D Scene Reconstruction</h3>
-                        <a href="#" class="github-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Read Paper
-                        </a>
+                        <h3>CyScat.jl &mdash; Electromagnetic Scattering Matrix Computation</h3>
+                        <span class="project-status">Ongoing Research</span>
                     </div>
                     <p class="project-description">
-                        Conducted a comprehensive analysis of failure cases in state-of-the-art multi-view 3D reconstruction method MASt3R under challenging capture conditions. Collected and annotated a custom scene dataset with varying lighting, occlusions, and viewpoint distributions. Documented systematic limitations and proposed potential improvements for future work.
+                        Translating the CyScat electromagnetic scattering simulation package from MATLAB to Julia and Python under <strong>Prof. Raj Rao Nadakuditi</strong>. CyScat computes S-matrices (scattering matrices) for periodic arrays of cylinders using the T-matrix multiple scattering method with Modified Shanks Transformation for convergence acceleration. The package supports dielectric and perfectly-conducting (PEC) cylinders, Floquet mode analysis, and cascading via the Redheffer star product.
                     </p>
+                    <p class="project-description" style="margin-top: -0.5rem;">
+                        Through this work, I gained understanding of <strong>wavefront optimization via singular value decomposition</strong> of scattering matrices: the first right singular vector of S<sub>11</sub> gives the optimal wavefront to maximize reflection, and of S<sub>21</sub> to maximize transmission (open eigenchannels). The video below shows a simulation of an optimized wavefront tunneling through an S-shaped PEC maze with ~99.9% transmission, compared to only ~8.5% for normal incidence.
+                    </p>
+
+                    <!-- Video -->
+                    <div style="margin: 1.5rem 0; text-align: center;">
+                        <video controls style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                            <source src="media/s_channel_maze.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.75rem;">
+                            <em>Open eigenchannel wavefront routing through an S-shaped PEC maze: normal incidence (8.5% transmission) vs. optimal wavefront (99.9% transmission)</em>
+                        </p>
+                        <div style="margin-top: 0.5rem;">
+                            <a href="media/s_channel_maze.mp4" download class="pub-link" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-download"></i> Download Video (MP4)
+                            </a>
+                        </div>
+                    </div>
+
                     <div class="project-tech">
-                        <span class="tech-badge">3D Reconstruction</span>
-                        <span class="tech-badge">Multi-view Geometry</span>
+                        <span class="tech-badge">Julia</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Scattering Matrices</span>
+                        <span class="tech-badge">SVD / Eigenchannels</span>
+                        <span class="tech-badge">Floquet Modes</span>
+                        <span class="tech-badge">Multiple Scattering</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ML for Time-Series -->
+            <div class="category-section" id="aging-prediction">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-brain" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Machine Learning for Time-Series Prediction
+                </h2>
+
+                <div class="project-detailed">
+                    <div class="project-detailed-header">
+                        <h3>Attention-Enhanced Seq2Seq Models for Battery Aging Prediction</h3>
+                        <span class="project-status">Ongoing Research</span>
+                    </div>
+                    <p class="project-description">
+                        Developed sequence-to-sequence deep learning models for predicting NMC battery capacity degradation trajectories from early-life cycling data. The model takes the first ~30% of a cell's capacity-fade curve and predicts the complete remaining trajectory. Key innovations include:
+                    </p>
+                    <ul style="color: var(--text-secondary); margin: -0.5rem 0 1rem 1.5rem; line-height: 1.8;">
+                        <li><strong>Bahdanau attention mechanism</strong> with a bidirectional LSTM encoder, allowing the decoder to selectively attend to relevant past timesteps</li>
+                        <li><strong>Adaptive variable-length sequence handling</strong> with custom collation and masked loss computation for cells with different lifetimes</li>
+                        <li><strong>Combined loss function</strong> (MSE + MAE + trend-preservation) to maintain trajectory shape fidelity</li>
+                        <li><strong>Early-life feature conditioning</strong> via PCA-reduced cycling characteristics to improve generalization across operating conditions</li>
+                    </ul>
+                    <p class="project-description">
+                        Achieves <strong>2&ndash;5% MAPE</strong> on held-out test sets with robust generalization across C-rates and depths of discharge. Evaluated on 225 NMC cells with separate in-distribution and out-of-distribution test sets.
+                    </p>
+                    <p class="project-description" style="margin-top: -0.5rem;">
+                        <em>Electric Vehicle Center, University of Michigan &mdash; Prof. Ziyou Song</em>
+                    </p>
+
+                    <!-- Results Images -->
+                    <div style="margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 0.75rem; color: var(--text-primary);">Results</h4>
+
+                        <div style="margin-bottom: 1.5rem; text-align: center; background: var(--bg-color); padding: 1rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                            <img src="media/adaptive_seq2seq_attention.png" alt="Attention-enhanced Seq2Seq results: performance metrics, sample trajectories, and error distributions" style="max-width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.75rem;">
+                                <em>Attention-enhanced adaptive Seq2Seq: performance comparison, sample predictions, error distributions, and model insights</em>
+                            </p>
+                            <a href="media/adaptive_seq2seq_attention.png" download class="pub-link" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
+                                <i class="fas fa-download"></i> Download Image (PNG)
+                            </a>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem; text-align: center; background: var(--bg-color); padding: 1rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                            <img src="media/encoder_ratio_analysis.png" alt="Encoder ratio analysis: impact of encoder/decoder split on prediction accuracy" style="max-width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.75rem;">
+                                <em>Encoder ratio analysis: impact of encoder/decoder data split on MAPE, RMSE, and sequence lengths</em>
+                            </p>
+                            <a href="media/encoder_ratio_analysis.png" download class="pub-link" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
+                                <i class="fas fa-download"></i> Download Image (PNG)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
                         <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">Dataset Creation</span>
-                    </div>
-                </div>
-
-                <div class="project-detailed">
-                    <div class="project-detailed-header">
-                        <h3>Bar-Code Detection using OpenCV</h3>
-                        <a href="https://github.com/Thiruloksundar/Object_and_Barcode_detection" class="github-link" target="_blank">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                    <p class="project-description">
-                        Built a classical computer vision pipeline to detect barcodes on grocery items and classify bounding boxes by barcode readability status. Used traditional CV techniques including edge detection, morphological operations, and contour analysis. Achieved robust detection across various lighting conditions and barcode orientations.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">OpenCV</span>
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Image Processing</span>
-                        <span class="tech-badge">Object Detection</span>
+                        <span class="tech-badge">Seq2Seq</span>
+                        <span class="tech-badge">Attention Mechanism</span>
+                        <span class="tech-badge">Bidirectional LSTM</span>
+                        <span class="tech-badge">Time-Series Prediction</span>
+                        <span class="tech-badge">Battery Degradation</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Machine Learning Projects -->
+            <!-- Other ML / Audio -->
             <div class="category-section">
                 <h2 class="category-title">
-                    <span class="category-icon">🧠</span> Machine Learning & AI
+                    <span class="category-icon"><i class="fas fa-microphone" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Other Machine Learning Research
                 </h2>
-                
+
                 <div class="project-detailed">
                     <div class="project-detailed-header">
                         <h3>Content-Agnostic Deepfake Audio Detection</h3>
-                        <span class="project-status">Research Project</span>
+                        <span class="project-status">Submitted to Interspeech 2026</span>
                     </div>
                     <p class="project-description">
-                        Created a benchmark audio dataset with 1M+ samples using multiple TTS models with paired real/fake audios. Engineered end-to-end pipelines for generation, labeling, and evaluation. Trained an audio-language detection model that outperforms human listeners and achieves state-of-the-art performance on deepfake detection.
+                        Created a benchmark audio dataset with 1M+ samples using multiple TTS models with paired real/fake audios. Trained an audio-language detection model that outperforms human listeners and achieves state-of-the-art performance. Eliminating linguistic cues forced the model to rely solely on acoustic artifacts, making it robust to content variation.
+                    </p>
+                    <p class="project-description" style="margin-top: -0.5rem;">
+                        <em>Carnegie Mellon University &mdash; Dr. Arun Balajee Vasudevan</em>
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">PyTorch</span>
@@ -151,89 +219,20 @@
                         <span class="tech-badge">Dataset Engineering</span>
                     </div>
                 </div>
-
-                <div class="project-detailed">
-                    <div class="project-detailed-header">
-                        <h3>Video-LLM Activity Hallucination Mitigation</h3>
-                        <span class="project-status">Research Project</span>
-                    </div>
-                    <p class="project-description">
-                        Addressed activity hallucinations in Video-LLMs by creating an annotated video-activity dataset with fine-grained evaluation metrics for actor, action, object, and environment understanding. Designed targeted question types and evaluation methods for robust activity recognition.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Video-LLMs</span>
-                        <span class="tech-badge">Multimodal Learning</span>
-                        <span class="tech-badge">Dataset Annotation</span>
-                        <span class="tech-badge">Evaluation Metrics</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Coursework & Academic Projects -->
-            <div class="category-section">
-                <h2 class="category-title">
-                    <span class="category-icon">📚</span> Coursework Projects
-                </h2>
-                
-                <div class="projects-grid-small">
-                    <div class="small-project-card">
-                        <h4>Algorithmic Motion Planning</h4>
-                        <p>Implemented RRT, PRM, and A* algorithms for robot motion planning in complex environments</p>
-                        <div class="small-tech">
-                            <span>C++</span>
-                            <span>Path Planning</span>
-                        </div>
-                    </div>
-
-                    <div class="small-project-card">
-                        <h4>Probabilistic State Estimation</h4>
-                        <p>Developed Bayesian filtering techniques for robot state estimation with noisy sensors</p>
-                        <div class="small-tech">
-                            <span>MATLAB</span>
-                            <span>Probability</span>
-                        </div>
-                    </div>
-
-                    <div class="small-project-card">
-                        <h4>Sensor Fusion for Localization</h4>
-                        <p>Combined IMU, GPS, and wheel odometry data for accurate robot localization</p>
-                        <div class="small-tech">
-                            <span>Python</span>
-                            <span>Sensor Fusion</span>
-                        </div>
-                    </div>
-
-                    <div class="small-project-card">
-                        <h4>Object Detection Pipeline</h4>
-                        <p>Built end-to-end object detection system using YOLO for warehouse applications</p>
-                        <div class="small-tech">
-                            <span>PyTorch</span>
-                            <span>YOLO</span>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Achievements -->
             <div class="achievements-section">
                 <h2 class="category-title">
-                    <span class="category-icon">🏆</span> Achievements & Competitions
+                    <span class="category-icon"><i class="fas fa-trophy" style="font-size:1.8rem;color:#92400e"></i></span> Achievements & Competitions
                 </h2>
-                
+
                 <div class="achievement-grid">
                     <div class="achievement-card">
-                        <div class="achievement-icon">🥈</div>
-                        <h4>Top-25 Team</h4>
-                        <p>Smart India Hackathon 2024</p>
-                        <span class="achievement-detail">Disaster notification webpage with NLP</span>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon">🥉</div>
+                        <div class="achievement-icon" style="font-size:2rem;"><i class="fas fa-medal" style="color:#92400e"></i></div>
                         <h4>54th All-India Rank</h4>
                         <p>Amazon ML Challenge 2023</p>
                         <span class="achievement-detail">FAISS-based product dimension prediction</span>
-                        <a href="https://github.com/Thiruloksundar" class="achievement-link">View Solution →</a>
                     </div>
                 </div>
             </div>
@@ -243,7 +242,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Thirulok Sundar Mohan Rasu. Last updated: January 2025</p>
+            <p>&copy; 2026 Thirulok Sundar Mohan Rasu. Last updated: March 2026</p>
             <div class="footer-links">
                 <a href="mailto:thirulok@umich.edu"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/Thiruloksundar" target="_blank"><i class="fab fa-github"></i></a>

@@ -19,7 +19,8 @@
                 <li><a href="index.html#experience" class="nav-link">Experience</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="publications.html" class="nav-link active">Publications</a></li>
-                <li><a href="docs/CV.pdf" class="nav-link" target="_blank">CV</a></li>
+                <li><a href="docs/CV.pdf" class="nav-link" target="_blank">Resume</a></li>
+                <li><a href="docs/UM_transcript.pdf" class="nav-link" target="_blank">Transcript</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -40,56 +41,76 @@
     <!-- Publications Section -->
     <section class="section publications-section">
         <div class="container">
-            <!-- 2025 Publications -->
+            <!-- Under Review / Preprints Section -->
             <div class="year-section">
-                <h2 class="year-title">2025</h2>
-                
+                <h2 class="year-title">Under Review / In Preparation</h2>
+
+                <div class="publication-item">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Degradation-Constrained Optimization of Solid Electrolyte Interphase Parameters from Electrochemical Impedance Spectroscopy Using a Hybrid Physics-Based Model</h3>
+                        <div class="publication-badges">
+                            <span class="badge badge-preprint">Preprint</span>
+                        </div>
+                    </div>
+
+                    <p class="publication-authors">
+                        <strong>Thirulok Sundar</strong>, Jiawei Zhang, Ziyou Song
+                    </p>
+
+                    <p class="publication-venue">
+                        <em>Preprint submitted to Elsevier</em>
+                    </p>
+
+                    <p class="publication-abstract">
+                        A hybrid EIS model coupling a physics-based transmission-line SEI impedance formulation with a compact ECM representation. Degradation-aware constraints embedded in a differential evolution optimizer enforce monotonic SEI growth from BOL to EOL. Validated on 6 commercial Li-ion cells across multiple SOC levels, yielding 1.7% MAP error. OAT sensitivity analysis identifies L<sub>SEI</sub> and &sigma;<sub>SEI</sub> as the dominant parameters governing the high-frequency SEI arc.
+                    </p>
+
+                    <div class="publication-links">
+                        <a href="Hybrid_Physics_model_for_EIS.pdf" class="pub-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Paper Draft
+                        </a>
+                    </div>
+
+                    <div class="publication-topics">
+                        <span class="topic-tag">Physics-Based Modeling</span>
+                        <span class="topic-tag">Electrochemical Impedance</span>
+                        <span class="topic-tag">Differential Evolution</span>
+                        <span class="topic-tag">Li-ion Batteries</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Under Review -->
+            <div class="year-section">
+                <h2 class="year-title">Submitted / Under Review</h2>
+
                 <div class="publication-item">
                     <div class="publication-header">
                         <h3 class="publication-title">Towards Content-Agnostic Deepfake Speech Detection with Multi-TTS</h3>
                         <div class="publication-badges">
-                            <span class="badge badge-conference">ICASSP 2025</span>
-                            <span class="badge badge-spotlight">Accepted</span>
+                            <span class="badge badge-preprint">Interspeech 2026</span>
+                            <span class="badge badge-spotlight">Under Review</span>
                         </div>
                     </div>
-                    
+
                     <p class="publication-authors">
                         <strong>Thirulok Sundar Mohan Rasu</strong>, Aswin Suresh, Arun Balajee Vasudevan
                     </p>
-                    
+
                     <p class="publication-venue">
-                        <em>IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) 2025</em>
+                        <em>Submitted to Interspeech 2026</em>
                     </p>
-                    
+
                     <p class="publication-abstract">
                         We propose a content-agnostic deepfake speech detection model trained on a curated dataset of 1M+ real-fake speech pairs. By using transcripts from real speech to generate synthetic audio using cutting-edge TTS systems (YourTTS, XTTS-v2, OpenVoice), we eliminate linguistic cues and force the model to rely solely on acoustic artifacts. Our model achieves superior performance compared to prior work and outperforms human listeners across all speech lengths.
                     </p>
-                    
+
                     <div class="publication-links">
                         <a href="docs/Mohan_Rasu.pdf" class="pub-link" target="_blank">
                             <i class="fas fa-file-pdf"></i> Paper
                         </a>
-                        <a href="#" class="pub-link" target="_blank">
-                            <i class="fab fa-github"></i> Code (Coming Soon)
-                        </a>
-                        <a href="#" class="pub-link" target="_blank">
-                            <i class="fas fa-database"></i> Dataset (Coming Soon)
-                        </a>
-                        <a href="#" class="pub-link bibtex-link">
-                            <i class="fas fa-quote-left"></i> BibTeX
-                        </a>
                     </div>
-                    
-                    <!-- BibTeX (Hidden by default) -->
-                    <div class="bibtex-container" style="display: none;">
-                        <pre><code>@inproceedings{mohanrasu2025deepfake,
-  title={Towards Content-Agnostic Deepfake Speech Detection with Multi-TTS},
-  author={Mohan Rasu, Thirulok Sundar and Suresh, Aswin and Vasudevan, Arun Balajee},
-  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-  year={2025}
-}</code></pre>
-                    </div>
-                    
+
                     <div class="publication-topics">
                         <span class="topic-tag">Audio ML</span>
                         <span class="topic-tag">Deepfake Detection</span>
@@ -99,44 +120,10 @@
                 </div>
             </div>
 
-            <!-- Under Review / Preprints Section -->
-            <div class="year-section">
-                <h2 class="year-title">Under Review / In Progress</h2>
-                
-                <div class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Challenges in Multi-view 3D Scene Reconstruction</h3>
-                        <div class="publication-badges">
-                            <span class="badge badge-preprint">Technical Report</span>
-                        </div>
-                    </div>
-                    
-                    <p class="publication-authors">
-                        <strong>Thirulok Sundar Mohan Rasu</strong>
-                    </p>
-                    
-                    <p class="publication-abstract">
-                        Analyzed failure cases of MASt3R for multi-view reconstruction under challenging capture conditions. Collected a small scene dataset and documented limitations of current state-of-the-art methods.
-                    </p>
-                    
-                    <div class="publication-links">
-                        <a href="#" class="pub-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                    </div>
-                    
-                    <div class="publication-topics">
-                        <span class="topic-tag">3D Reconstruction</span>
-                        <span class="topic-tag">Multi-view Geometry</span>
-                        <span class="topic-tag">Computer Vision</span>
-                    </div>
-                </div>
-            </div>
-
             <!-- Call to Action -->
             <div class="cta-box">
                 <h3>Interested in Collaboration?</h3>
-                <p>I'm always open to discussing new research ideas, potential collaborations, or interesting projects. Feel free to reach out!</p>
+                <p>I'm actively seeking PhD opportunities for Fall 2026 in scientific ML, physics-informed modeling, and computational optimization. Feel free to reach out!</p>
                 <a href="mailto:thirulok@umich.edu" class="btn-primary">Get in Touch</a>
             </div>
         </div>
@@ -145,7 +132,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Thirulok Sundar Mohan Rasu. Last updated: January 2025</p>
+            <p>&copy; 2026 Thirulok Sundar Mohan Rasu. Last updated: March 2026</p>
             <div class="footer-links">
                 <a href="mailto:thirulok@umich.edu"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/Thiruloksundar" target="_blank"><i class="fab fa-github"></i></a>

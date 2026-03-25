@@ -252,6 +252,45 @@ console.log(
 );
 
 // ========================================
+// LIGHTBOX FOR PROJECT IMAGES
+// ========================================
+
+// Create lightbox overlay
+const lightboxOverlay = document.createElement('div');
+lightboxOverlay.className = 'lightbox-overlay';
+const lightboxImg = document.createElement('img');
+lightboxOverlay.appendChild(lightboxImg);
+document.body.appendChild(lightboxOverlay);
+
+// Click on project images to enlarge
+document.querySelectorAll('.project-detailed img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.setAttribute('title', 'Click to enlarge');
+    img.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Close lightbox on click
+lightboxOverlay.addEventListener('click', () => {
+    lightboxOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+// Close lightbox on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) {
+        lightboxOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// ========================================
 // PERFORMANCE OPTIMIZATION
 // ========================================
 
