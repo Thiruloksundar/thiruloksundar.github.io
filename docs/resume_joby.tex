@@ -1,0 +1,84 @@
+\documentclass[9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\sect}[1]{\vspace{4pt}\noindent\textbf{\large #1}\vspace{3pt}\hrule\vspace{6pt}}
+
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+  {\Large \textbf{Thirulok Sundar Mohan Rasu}}\\[3pt]
+  Ann Arbor, MI 48105 $\,|\,$ +1 (248) 704-2911 $\,|\,$
+  \href{mailto:thirulok@umich.edu}{thirulok@umich.edu} $\,|\,$
+  \href{https://thiruloksundar.github.io}{thiruloksundar.github.io} $\,|\,$
+  \href{https://github.com/Thiruloksundar}{github.com/Thiruloksundar} $\,|\,$
+  \href{https://www.linkedin.com/in/thirulok-sundar-mohanrasu/}{linkedin.com/in/thirulok-sundar-mohanrasu}
+\end{center}
+\vspace{-3mm}
+
+% ---------- Education ----------
+\sect{Education}
+\textbf{University of Michigan --- Ann Arbor} \hfill Aug 2025 -- Dec 2026\\
+M.S., Electrical and Computer Engineering \hfill GPA: 4.0 / 4.0\\
+Relevant courses: \emph{Matrix Methods for ML \& Signal Processing (ECE 551), Probability \& Random Processes (ECE 501)}\\[5pt]
+\textbf{Indian Institute of Technology (ISM) Dhanbad} \hfill Dec 2021 -- May 2025\\
+B.Tech., Electrical Engineering. Member: \emph{CyberLabs (Machine Learning)} \hfill GPA: 8.30 / 10
+
+% ---------- Skills ----------
+\sect{Skills}
+\textbf{Languages:} Python, MATLAB, C++\\
+\textbf{Battery \& Electrical:} \textbf{Battery Management Systems (BMS)}, Electrochemical Impedance Spectroscopy (EIS), Cell Characterization, Battery State Estimation (SOC/SOH), Degradation Mechanism Analysis (LAM, SEI, LLI), DRT Analysis, Verification \& Testing, Data Acquisition \& Processing\\
+\textbf{Tools:} PyTorch, SciPy, Pandas, NumPy, Matplotlib, Simulink, Excel, GitHub, Linux
+
+% ---------- Experience ----------
+\sect{Experience}
+
+\textbf{Electric Vehicle Center --- University of Michigan (Prof.\ Ziyou Song)} \hfill Oct 2025 -- Present\\
+\emph{Graduate Research Assistant}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Built \textbf{Python/MATLAB data pipelines} to collect, process, and analyze \textbf{electrochemical impedance spectroscopy (EIS)} measurements across 6 battery cells at multiple \textbf{SOC and SOH} levels; applied \textbf{physics-informed models} with \textbf{Differential Evolution} optimization, achieving \textbf{1.7\% mean error} across 117 EIS spectra
+  \item Developed \textbf{ML surrogate model} (attention-enhanced Seq2Seq) for \textbf{battery capacity-fade prediction}; identified discharge capacity, Ah throughput, C-rates, and DoD as key predictors via PCA --- achieving \textbf{2--5\% MAPE} across 225 cells from only the first 30\% of cycling data
+  \item Designed \textbf{accelerated test protocol framework} converting real-world driving profiles to battery power demand cycles; optimized protocols to maximize coverage of degradation mechanisms (\textbf{LAM-NE, LAM-PE, SEI, LLI-plating}) for efficient lab characterization
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{HDR Lab --- University of Michigan} \hfill Jan 2026 -- Present\\
+\emph{Graduate Research Assistant}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Developing real-time \textbf{3D depth estimation} algorithms for visuo-tactile sensors; built \textbf{iOS app} for automated hardware data collection and bench-level testing on robotic arm setups
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{Carnegie Mellon University (Dr.\ Arun Balajee Vasudevan)} \hfill Jan 2024 -- Sep 2025\\
+\emph{Research Intern}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Engineered \textbf{end-to-end data generation, labeling, and evaluation pipelines} in Python to curate and benchmark a \textbf{1M+ sample dataset}; fine-tuned multimodal ML models achieving \textbf{90\% accuracy}; paper submitted to \textbf{Interspeech 2026} (under review)
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{Mowito} \hfill Mar 2023 -- Jul 2023\\
+\emph{Robotics Software Intern}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Built and integrated modular \textbf{robot perception pipeline} into production hardware automation systems; implemented \textbf{dataset deduplication} (30\% size reduction) and order-fulfillment optimization for live warehouse deployment
+\end{itemize}
+
+% ---------- Selected Projects ----------
+\sect{Selected Projects}
+
+\textbf{ML Pipeline for Battery Aging Prediction} \hfill 2025\\
+Built end-to-end pipeline in Python: ingested raw \textbf{NMC cycling data}, performed \textbf{feature engineering} and \textbf{PCA-based selection} on electrochemical signals (discharge capacity, Ah throughput, C-rate, DoD), trained \textbf{Seq2Seq model} for multi-horizon \textbf{capacity-fade forecasting}; visualized degradation trajectories across 225 cells.
+
+\textbf{Robot State Estimation: EKF \& Particle Filters} \href{https://github.com/Thiruloksundar/robot_state_estimation}{(GitHub)} \hfill 2025\\
+Implemented \textbf{Extended Kalman Filter} and \textbf{Particle Filter} for PR2 robot localization; analyzed sensor fusion, noise modeling, and accuracy vs.\ compute trade-offs across five scenarios.
+
+\end{document}

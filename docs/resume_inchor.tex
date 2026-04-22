@@ -1,0 +1,89 @@
+\documentclass[9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\sect}[1]{\vspace{4pt}\noindent\textbf{\large #1}\vspace{3pt}\hrule\vspace{6pt}}
+
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+  {\Large \textbf{Thirulok Sundar Mohan Rasu}}\\[3pt]
+  Ann Arbor, MI 48105 $\,|\,$ +1 (248) 704-2911 $\,|\,$
+  \href{mailto:thirulok@umich.edu}{thirulok@umich.edu} $\,|\,$
+  \href{https://thiruloksundar.github.io}{thiruloksundar.github.io} $\,|\,$
+  \href{https://github.com/Thiruloksundar}{github.com/Thiruloksundar} $\,|\,$
+  \href{https://www.linkedin.com/in/thirulok-sundar-mohanrasu/}{linkedin.com/in/thirulok-sundar-mohanrasu}
+\end{center}
+\vspace{-3mm}
+
+% ---------- Education ----------
+\sect{Education}
+\textbf{University of Michigan --- Ann Arbor} \hfill Aug 2025 -- Dec 2026\\
+M.S., Electrical and Computer Engineering \hfill GPA: 4.0 / 4.0\\
+Relevant courses: \emph{Algorithmic Robotics, Mobile Robotics, Matrix Methods for ML \& Signal Processing}\\[5pt]
+\textbf{Indian Institute of Technology (ISM) Dhanbad} \hfill Dec 2021 -- May 2025\\
+B.Tech., Electrical Engineering. Member: \emph{CyberLabs (Machine Learning)} \hfill GPA: 8.30 / 10
+
+% ---------- Skills ----------
+\sect{Skills}
+\textbf{Languages:} Python, C++, MATLAB\\
+\textbf{3D Vision \& Reconstruction:} \textbf{3D Gaussian Splatting (3DGS)}, Multi-view 3D/4D Reconstruction, Depth Estimation, SLAM, LiDAR, Sensor Fusion\\
+\textbf{Physical-AI \& Robotics:} ROS2, Nav2, State Estimation, Robot Perception, Object Detection \& Segmentation, VLMs, Embodied-AI Datasets (DROID)\\
+\textbf{ML \& Tools:} PyTorch, OpenCV, HuggingFace, TensorFlow, GitHub, Linux
+
+% ---------- Research Experience ----------
+\sect{Research Experience}
+
+\textbf{University of Michigan (Prof.\ Jeong Joon Park)} \hfill Aug 2025 -- Dec 2025\\
+\emph{Graduate Research Assistant}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Applied \textbf{3D Gaussian Splatting (3DGS)}, \textbf{SpatialTracker}, and \textbf{VGGT} to the \textbf{DROID embodied-AI manipulation dataset} to build a \textbf{4D scene reconstruction pipeline}; generates dynamic 3D scene representations from robot manipulation video sequences for physical-AI perception research
+  \item Designed \textbf{data collection pipelines and evaluation protocols} to assess reconstruction quality, temporal consistency, and coverage across diverse manipulation scenes and viewpoint conditions
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{HDR Lab --- University of Michigan} \hfill Jan 2026 -- Present\\
+\emph{Graduate Research Assistant}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Developing real-time \textbf{3D depth estimation} algorithms for visuo-tactile sensors on robotic arms; built \textbf{iOS app} for automated physical-AI data collection enabling large-scale dataset generation for model training
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{University of Central Florida --- CRCV Lab (Prof.\ Yogesh Rawat)} \hfill Feb 2024 -- Dec 2024\\
+\emph{Research Intern}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Designed \textbf{evaluation harnesses} for \textbf{Video-LLMs}; defined fine-grained metrics for actor/action/object/environment recognition and targeted question types to systematically \textbf{surface model failures and hallucinations}
+  \item Built annotated \textbf{video-activity dataset} with structured evaluation protocol; defined \textbf{coverage and diversity metrics} across scenarios to benchmark model robustness
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{Mowito} \hfill Mar 2023 -- Jul 2023\\
+\emph{Robotics Software Intern}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Built modular \textbf{robot perception pipeline} using \textbf{Multi-head Mask R-CNN} for instance segmentation and object detection; integrated into production warehouse automation pipelines
+  \item Implemented \textbf{perceptual hashing} for large-scale dataset deduplication (30\% size reduction); developed order-fulfillment optimization using \textbf{Leiden clustering} for crate grouping
+\end{itemize}
+
+% ---------- Selected Projects ----------
+\sect{Selected Projects}
+
+\textbf{Semantic LiDAR-SLAM with Language-Guided Navigation} \href{https://github.com/chittinvarunav/VLSGN_ROB530-Team21}{(GitHub)} \hfill 2026\\
+Integrated \textbf{Cartographer SLAM} with \textbf{Grounding DINO} in ROS2; SLAM builds a metric map while DINO populates a persistent \textbf{semantic object map} --- natural-language commands trigger \textbf{Nav2} navigation goals, enabling \textbf{zero-shot object-goal navigation} without environment-specific training.
+
+\textbf{VLA Model Fine-tuning for Robot Manipulation} \href{https://github.com/Thiruloksundar/OpenVLA-Libero-finetuning}{(GitHub)} \hfill 2025\\
+\textbf{Fine-tuned OpenVLA} (7B vision-language-action model) on the \textbf{LIBERO} embodied-AI manipulation benchmarks via \textbf{LoRA}; deployed on UMich HPC (NVIDIA A40). Training loss: 19.08 $\rightarrow$ 1.16 over 3 epochs.
+
+\textbf{Multi-view 3D Scene Reconstruction Analysis} \hfill 2025\\
+Systematically analyzed \textbf{MASt3R} failure cases under challenging capture conditions (occlusion, viewpoint variation, lighting); collected custom scene dataset and documented limitations --- directly relevant to \textbf{3DGS-based simulation} robustness.
+
+\end{document}

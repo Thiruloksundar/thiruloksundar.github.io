@@ -1,0 +1,91 @@
+\documentclass[8.2pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[top=0.35in, bottom=0.35in, left=0.4in, right=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\sect}[1]{\vspace{1pt}\noindent\textbf{\large #1}\vspace{1pt}\hrule\vspace{3pt}}
+
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+  {\Large \textbf{Thirulok Sundar Mohan Rasu}}\\[4pt]
+  Ann Arbor, MI 48105 $\,|\,$ +1 (248) 704-2911 $\,|\,$
+  \href{mailto:thirulok@umich.edu}{thirulok@umich.edu} $\,|\,$
+  \href{https://thiruloksundar.github.io}{thiruloksundar.github.io} $\,|\,$
+  \href{https://github.com/Thiruloksundar}{github.com/Thiruloksundar} $\,|\,$
+  \href{https://www.linkedin.com/in/thirulok-sundar-mohanrasu/}{linkedin.com/in/thirulok-sundar-mohanrasu}
+\end{center}
+\vspace{-3mm}
+
+% ---------- Education ----------
+\sect{Education}
+\vspace{-2mm}
+\textbf{University of Michigan -- Ann Arbor} \hfill Aug 2025 -- Dec 2026\\
+M.S., Electrical and Computer Engineering \hfill GPA: 4.0 / 4.0\\
+Relevant courses: \emph{Matrix Methods for ML \& Signal Processing (ECE 551), Probability \& Random Processes (ECE 501)}\\[4pt]
+\textbf{Indian Institute of Technology (ISM) Dhanbad} \hfill Dec 2021 -- May 2025\\
+B.Tech., Electrical Engineering. Member: \emph{CyberLabs (Machine Learning)} \hfill GPA: 8.30 / 10
+
+% ---------- Skills ----------
+\sect{Skills}
+\vspace{-2mm}
+\textbf{Languages:} Python, SQL, Julia, MATLAB\\
+\textbf{Data Science \& ML:} Pandas, NumPy, PySpark, \textbf{Machine Learning}, Data Ingestion \& Consolidation, Feature Engineering, Data Visualization (Matplotlib, Seaborn), JSON/NoSQL, Time-Series Analysis\\
+\textbf{Tools:} PyTorch, AWS S3, Scikit-learn, SciPy, HuggingFace, GitHub, Linux
+
+% ---------- Experience ----------
+\sect{Experience}
+\vspace{-2mm}
+
+\textbf{Electric Vehicle Center -- University of Michigan} \hfill Oct 2025 -- Present\\
+\emph{Graduate Research Assistant (Prof.\ Ziyou Song)}\\
+\vspace{-6mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Built \textbf{data ingestion and processing pipelines} in \textbf{Python/Pandas} to collect, clean, and consolidate raw \textbf{electrochemical time-series datasets} (117 EIS spectra across 6 cells, multiple SOC/SOH levels); conducted \textbf{feature sensitivity (OAT) analysis} to identify most impactful parameters (SEI thickness, CPE exponent) driving impedance response from a 6-dimensional feature space
+  \item Performed \textbf{feature engineering and selection} on early-cycle battery data --- identified discharge capacity (\texttt{qdis}), cumulative Ah throughput, C-rates, depth of discharge, and DVA features as key predictors via \textbf{PCA-based dimensionality reduction}; used these as inputs to an \textbf{ML surrogate model} (attention-enhanced Seq2Seq) achieving \textbf{2--5\% MAPE} on capacity-fade trajectories across 225 cells
+  \item Developed \textbf{data-driven optimization framework} in Python to analyze accelerated test protocols; processed real-world driving profiles into structured \textbf{battery power demand datasets}, enabling systematic analysis of degradation mechanism diversity (LAM-NE, LAM-PE, SEI, LLI) across experimental conditions
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{Carnegie Mellon University} \hfill Jan 2024 -- Sep 2025\\
+\emph{Research Intern (Dr.\ Arun Balajee Vasudevan)}\\
+\vspace{-6mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Engineered \textbf{end-to-end data generation and labeling pipeline} in Python to curate a \textbf{1M+ sample dataset} of real/synthetic audio pairs; data stored in structured \textbf{JSON (NoSQL) format} with transcript, label, and metadata fields --- enabling scalable ingestion and querying
+  \item Fine-tuned \textbf{CLAP} audio-language model on curated dataset for fake audio detection achieving \textbf{90\% accuracy}; built automated evaluation pipelines for benchmarking across multiple TTS systems \emph{\textbf{\href{https://drive.google.com/file/d/1hdSPxQQA-PKayYQPPESZb11ofm7XrQRX/view?usp=sharing}{(paper)}}}
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{University of Central Florida -- CRCV Lab} \hfill Feb 2024 -- Dec 2024\\
+\emph{Research Intern (Prof.\ Yogesh Rawat)}\\
+\vspace{-6mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Created and \textbf{analyzed a large annotated video dataset} with structured \textbf{JSON entries} capturing actor, action, object, and environment labels per clip; designed fine-grained evaluation metrics and \textbf{QA processes} for activity understanding in Video-LLMs
+  \item Defined \textbf{data schema} and annotation taxonomy to standardize labeling across annotators; contributed to \textbf{data consolidation} pipeline integrating multi-source video collections into a unified evaluation benchmark
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{Mowito} \hfill Mar 2023 -- Jul 2023\\
+\emph{Software Intern}\\
+\vspace{-6mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Processed and labeled robot vision data stored in \textbf{AWS S3 buckets}; built modular \textbf{data annotation pipeline} supporting multiple formats (instance segmentation, picking, crate detection) with visualization tools; integrated into production pipelines for warehouse automation
+  \item Implemented \textbf{perceptual hashing} for large-scale \textbf{dataset deduplication}, reducing dataset size by \textbf{30\%}; developed \textbf{order-fulfillment optimization} using \textbf{Leiden clustering} to group crates and minimize completion time across high-density SKU environments
+\end{itemize}
+
+% ---------- Projects ----------
+\sect{Selected Projects}
+\vspace{-2mm}
+
+\textbf{ML Pipeline for Battery Aging Prediction} \hfill 2025\\
+Built full \textbf{data processing and ML pipeline} in Python: ingested raw NMC cycling data, performed \textbf{feature engineering} (discharge capacity, Ah throughput, C-rate, DoD), applied \textbf{PCA-based feature selection}, and trained attention-enhanced \textbf{Seq2Seq model} for \textbf{time-series forecasting}; visualized degradation trajectories and error distributions across 225 cells using Matplotlib/Seaborn.
+
+\textbf{Multi-view 3D Scene Reconstruction Analysis} \hfill 2025\\
+Collected and annotated a structured scene dataset; performed systematic \textbf{data-driven analysis} of reconstruction failure cases across varying lighting, occlusion, and viewpoint conditions; documented findings with quantitative metrics and visualizations.
+
+\end{document}

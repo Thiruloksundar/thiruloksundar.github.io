@@ -1,0 +1,91 @@
+\documentclass[9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\sect}[1]{\vspace{4pt}\noindent\textbf{\large #1}\vspace{3pt}\hrule\vspace{6pt}}
+
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+  {\Large \textbf{Thirulok Sundar Mohan Rasu}}\\[3pt]
+  Ann Arbor, MI 48105 $\,|\,$ +1 (248) 704-2911 $\,|\,$
+  \href{mailto:thirulok@umich.edu}{thirulok@umich.edu} $\,|\,$
+  \href{https://thiruloksundar.github.io}{thiruloksundar.github.io} $\,|\,$
+  \href{https://github.com/Thiruloksundar}{github.com/Thiruloksundar} $\,|\,$
+  \href{https://www.linkedin.com/in/thirulok-sundar-mohanrasu/}{linkedin.com/in/thirulok-sundar-mohanrasu}
+\end{center}
+\vspace{-3mm}
+
+% ---------- Education ----------
+\sect{Education}
+\textbf{University of Michigan --- Ann Arbor} \hfill Aug 2025 -- Dec 2026\\
+M.S., Electrical and Computer Engineering \hfill GPA: 4.0 / 4.0\\
+Relevant courses: \emph{Matrix Methods for ML \& Signal Processing (ECE 551), Probability \& Random Processes (ECE 501)}\\[5pt]
+\textbf{Indian Institute of Technology (ISM) Dhanbad} \hfill Dec 2021 -- May 2025\\
+B.Tech., Electrical Engineering \hfill GPA: 8.30 / 10
+
+% ---------- Skills ----------
+\sect{Skills}
+\textbf{Languages:} Python, C++, Julia, MATLAB, JAX\\
+\textbf{ML \& CV:} \textbf{Time-Series Forecasting}, \textbf{Object Detection \& Segmentation}, \textbf{Depth Estimation}, \textbf{Physics-Based Modeling}, \textbf{Optimization}, LSTMs, Attention, CNNs, Transformers\\
+\textbf{Tools:} PyTorch, OpenCV, SciPy, ROS2, \textbf{LiDAR} processing, GitHub, Linux
+
+% ---------- Experience ----------
+\sect{Experience}
+
+\textbf{Electric Vehicle Center --- University of Michigan} \hfill Oct 2025 -- Present\\
+\emph{Graduate Research Assistant (Prof.\ Ziyou Song)}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Developed \textbf{attention-enhanced Seq2Seq models} (Bahdanau attention + bidirectional LSTM) for \textbf{time-series forecasting} of battery capacity-fade trajectories; achieved \textbf{2--5\% MAPE} on 225 NMC cells --- architecture directly analogous to \textbf{load and demand forecasting} for \textbf{power systems}
+  \item Built \textbf{physics-based computational model} for electrochemical impedance spectroscopy, coupling a \textbf{physical systems} transmission-line model with circuit elements; applied \textbf{constrained Differential Evolution optimization} to extract battery state parameters, achieving \textbf{1.7\% mean error} across 117 spectra
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{HDR Lab --- University of Michigan} \hfill Jan 2026 -- Present\\
+\emph{Graduate Research Assistant}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Developing real-time \textbf{3D depth estimation} pipelines for visuo-tactile sensors using \textbf{multimodal sensor} fusion; methods applicable to reconstructing \textbf{physical infrastructure} geometry from \textbf{street-level and sensor data}
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{Mowito} \hfill Mar 2023 -- Jul 2023\\
+\emph{Software Intern}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Developed \textbf{Multi-head Mask R-CNN} models for \textbf{instance segmentation} and \textbf{object detection} in warehouse environments; integrated into production perception pipelines for autonomous robots
+  \item Implemented \textbf{perceptual hashing} for large-scale dataset deduplication (30\% size reduction); built modular annotation pipeline with visualization tools
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{Carnegie Mellon University} \hfill Jan 2024 -- Sep 2025\\
+\emph{Research Intern (Dr.\ Arun Balajee Vasudevan)}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Trained \textbf{large-scale ML} models on 1M+ audio pairs for deepfake speech detection, outperforming human listeners; paper submitted to \textbf{Interspeech 2026} (under review)
+\end{itemize}
+
+% ---------- Selected Projects ----------
+\sect{Selected Projects}
+
+\textbf{Semantic LiDAR-SLAM with Language-Guided Navigation} \href{https://github.com/chittinvarunav/VLSGN_ROB530-Team21}{(GitHub)} \hfill 2026\\
+Integrated \textbf{Cartographer SLAM} with \textbf{Grounding DINO} (vision \textbf{foundation model}) in ROS2; SLAM builds a \textbf{metric map} while DINO populates a persistent \textbf{semantic map} --- natural-language commands query the \textbf{geospatial} map to trigger navigation goals, enabling zero-shot \textbf{object-goal navigation} without environment-specific training.
+
+\textbf{Attention Seq2Seq for Time-Series Forecasting} \hfill 2025\\
+Bidirectional LSTM encoder-decoder with Bahdanau attention for \textbf{multi-horizon forecasting} of sensor time-series; trend-preservation loss + PCA feature conditioning. 2--5\% MAPE on 225 cells --- architecture applicable to \textbf{load and weather forecasting}.
+
+\textbf{Multi-view 3D Scene Reconstruction} (Course Project) \hfill 2025\\
+Analyzed MASt3R failure cases under occlusion and viewpoint variation; findings relevant to \textbf{world models of physical infrastructure} from \textbf{multimodal imagery}.
+
+% ---------- Publications ----------
+\sect{Publications}
+\textbf{T.\ S.\ Mohan Rasu}, A.\ Suresh, A.\ B.\ Vasudevan, ``Towards Content-Agnostic Deepfake Speech Detection with Multi-TTS,'' submitted to \emph{Interspeech 2026} (under review).
+
+\end{document}
