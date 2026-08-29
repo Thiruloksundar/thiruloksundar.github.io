@@ -1,0 +1,93 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\sect}[1]{\vspace{2pt}\noindent\textbf{\large #1}\vspace{1pt}\hrule\vspace{2pt}}
+
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+  {\Large \textbf{Thirulok Sundar Mohan Rasu}}\\[2pt]
+  Ann Arbor, MI 48105 --- (248) 704-2911 --- \href{mailto:thirulok@umich.edu}{thirulok@umich.edu} ---\\
+  \href{https://thiruloksundar.github.io}{thiruloksundar.github.io} --- \href{https://github.com/Thiruloksundar}{github.com/Thiruloksundar} --- \href{https://www.linkedin.com/in/thirulok-sundar-mohanrasu/}{linkedin.com/in/thirulok-sundar-mohanrasu}
+\end{center}
+
+% ---------- Education ----------
+\sect{Education}
+\textbf{University of Michigan --- Ann Arbor} \hfill Aug 2025 -- May 2027\\
+M.S., Electrical and Computer Engineering. \hfill GPA: 4.0 / 4.0\\
+Relevant course: \emph{Matrix Methods for Signal Processing and Machine Learning.}\\[3pt]
+\textbf{Indian Institute of Technology (ISM) Dhanbad} \hfill Dec 2021 -- May 2025\\
+B.Tech., Electrical Engineering. Member: \emph{CyberLabs (Machine Learning)} \hfill GPA: 8.30 / 10
+
+% ---------- Skills ----------
+\sect{Skills}
+\textbf{Languages:} Python, C++, C, MATLAB.\\
+\textbf{Areas:} Embedded Programming, Hardware Integration, Testing \& Debugging, Machine learning, Computer Vision, 3D/4D Reconstruction, LLMs, Robotics, Signal Processing\\
+\textbf{Tools \& Frameworks:} PyTorch, TensorFlow, Linux, Git/GitHub, OpenCV, Arduino, Simulink, AWS-S3, ROS2
+
+% ---------- Experience ----------
+\sect{Experience}
+
+\textbf{University of Michigan, Ann Arbor} \hfill Aug 2025 -- Present\\
+\emph{Research Assistant}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Creating a 4D dataset for robot perception and learning; designing data collection pipelines and evaluation protocols.
+  \item Working on 3D depth estimation algorithms and collecting data for model training with robot arm and tactile sensor.
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{Carnegie Mellon University} \hfill Jan 2024 -- Sep 2025\\
+\emph{Research Intern (Dr.\ Arun Balajee Vasudevan)}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Developed a benchmark audio dataset using multiple TTS models with paired real/fake audios; engineered pipelines for generation, labeling, and evaluation. Paper submitted to \textbf{Interspeech 2026 Conference} (under review).
+  \item Trained an foundational audio-language model (CLAP) and used transcript-based detection (Llama-8b) to identify synthetic audio
+  \item Visualized audio waveforms and experimented with background noise removal/ speech enhancement techniques.
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{University of Central Florida} \hfill Feb 2024 -- Dec 2024\\
+\emph{Research Intern (Prof.\ Yogesh Rawat)}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Created an annotated video-activity dataset and fine-grained evaluation metrics for actor/action/object/environment classes for LLM fine-tuning.
+  \item Designed targeted question types and evaluation methods for robust activity understanding.
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{Mowito} \hfill Mar 2023 -- Jul 2023\\
+\emph{Robotics Software Intern}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+  \item Implemented perceptual-hashing to deduplicate images in time-sorted training datasets, improving model training efficiency.
+  \item Built a Dataset class supporting multiple annotation types (instance, picking, crate) and visualization tools; integrated into production pipelines.
+  \item Implemented order-completion time estimation and Leiden clustering for crate grouping to optimize order fulfillment.
+\end{itemize}
+
+% ---------- Projects ----------
+\sect{Projects}
+
+\textbf{SO-101 Robot Arm Assembly \& Imitation Learning}\\
+Assembled and integrated a 3D-printed SO-101 robot arm; collected teleoperation dataset for manipulation tasks; trained Action Chunking Transformer (ACT) policy via imitation learning and evaluated on real hardware.
+
+\textbf{Implementation of MPPT control techniques (MATLAB \& Arduino)}\\
+Final-year thesis: Implemented Perturb \& Observe and Incremental Conductance MPPT for solar panels; real-time embedded control via Arduino with MATLAB simulation, system verification, and debugging.
+
+\textbf{Challenges in Multi-view 3D Scene Reconstruction}\\
+Analyzed failure cases of MASt3R for multi-view reconstruction under challenging capture conditions; collected a small scene dataset and documented limitations.
+
+\textbf{Image Classification using Few-Shot Graph Neural Networks}\\
+Optimized few-shot GNN pipelines for classification; created dataset of fruit diseases, designed node features and adjacency extraction using deep models.
+
+\textbf{Bar-Code Detection using OpenCV}\\
+Classic CV pipeline to detect barcodes on grocery items and classify bounding boxes by barcode readability status.
+
+\end{document}
