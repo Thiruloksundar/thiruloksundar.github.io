@@ -15,11 +15,11 @@
             <a href="index.html" class="logo">Thirulok Sundar</a>
             <ul class="nav-menu">
                 <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="index.html#research" class="nav-link">Research</a></li>
+                <li><a href="index.html#research" class="nav-link">Areas</a></li>
                 <li><a href="index.html#experience" class="nav-link">Experience</a></li>
                 <li><a href="projects.html" class="nav-link active">Projects</a></li>
                 <li><a href="publications.html" class="nav-link">Publications</a></li>
-                <li><a href="docs/CV.pdf" class="nav-link" target="_blank">Resume</a></li>
+                <li><a href="docs/Thirulok_Sundar_Resume.pdf" class="nav-link" target="_blank">Resume</a></li>
                 <li><a href="docs/UM_transcript.pdf" class="nav-link" target="_blank">Transcript</a></li>
             </ul>
             <div class="hamburger">
@@ -34,74 +34,279 @@
     <section class="page-header">
         <div class="container">
             <h1>Projects</h1>
-            <p>Research in physics-based modeling, machine learning, and computational methods</p>
+            <p>Robotics software, perception, world models, and machine learning</p>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section class="section">
         <div class="container">
-            <!-- Physics-Based Modeling -->
-            <div class="category-section" id="eis-modeling">
+
+            <!-- Robot Manipulation -->
+            <div class="category-section" id="visual-servoing">
                 <h2 class="category-title">
-                    <span class="category-icon"><i class="fas fa-atom" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Physics-Based Modeling & Optimization
+                    <span class="category-icon"><i class="fas fa-robot" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Robot Manipulation &amp; Visual Servoing
                 </h2>
 
                 <div class="project-detailed">
                     <div class="project-detailed-header">
-                        <h3>Degradation-Constrained Optimization of SEI Parameters from EIS Using a Hybrid Physics-Based Model</h3>
-                        <a href="Hybrid_Physics_model_for_EIS.pdf" class="github-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper Draft
-                        </a>
+                        <h3>CAD-Free Auto-Fastening via Single-Demonstration Visual Servoing</h3>
+                        <span class="project-status">Mowito &mdash; Industry</span>
                     </div>
                     <p class="project-description">
-                        Developed a hybrid EIS model that couples a physics-based transmission-line SEI impedance formulation with a compact equivalent circuit model (ECM). The model extracts physically meaningful parameters &mdash; SEI thickness (L<sub>SEI</sub>), diffusion coefficient (D<sub>SEI</sub>), ionic conductivity (&sigma;<sub>SEI</sub>), CPE capacitance, and ohmic resistance &mdash; from experimental Nyquist spectra. A key contribution is the embedding of <strong>degradation-aware constraints</strong> into the Differential Evolution (DE) optimizer, enforcing that L<sub>SEI</sub> and R<sub>0</sub> monotonically increase from beginning-of-life (BOL) to end-of-life (EOL), consistent with established electrochemical aging theory. A multi-SOC fitting strategy reduces free parameters from 6 to 2&ndash;3 per fit. Validated across 6 commercial Li-ion cells at multiple SOC levels, yielding <strong>1.7% mean absolute percentage error</strong> over 117 EIS spectra. OAT sensitivity analysis quantifies the relative importance of each SEI parameter.
+                        Enhanced the full software stack for a visual-servoing-based auto-fastening system that derives target bolt poses from a <strong>single human demonstration</strong>, removing the need for a CAD model and enabling robotic fastening on parts moving continuously on a conveyor. The system was demonstrated live to investors, customers, and integrators.
                     </p>
-                    <p class="project-description" style="margin-top: -0.5rem;">
-                        <em>Collaborators: Jiawei Zhang, Prof. Ziyou Song &mdash; Electric Vehicle Center, University of Michigan</em>
-                    </p>
-                    <!-- Poster -->
-                    <div style="margin: 1.5rem 0;">
-                        <h4 style="margin-bottom: 0.75rem; color: var(--text-primary);">EVC Symposium 2026 Poster</h4>
-                        <div style="text-align: center; background: var(--bg-color); padding: 1rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-                            <object data="docs/EVC_Symposium_2026_poster.pdf" type="application/pdf" width="100%" height="600" style="border-radius: var(--radius-md);">
-                                <p>Your browser does not support embedded PDFs. <a href="docs/EVC_Symposium_2026_poster.pdf" target="_blank">Download the poster</a>.</p>
-                            </object>
-                            <div style="margin-top: 0.75rem;">
-                                <a href="docs/EVC_Symposium_2026_poster.pdf" download class="pub-link" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-                                    <i class="fas fa-download"></i> Download Poster (PDF)
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
+                    <ul style="color: var(--text-secondary); margin: -0.5rem 0 1rem 1.5rem; line-height: 1.8;">
+                        <li><strong>Robust pose estimation:</strong> added a detector-free, semi-dense matching method plus a real-time tracker so pose estimates survive occlusion and low-texture parts; raised vision-stack throughput from <strong>14.5&nbsp;Hz to 21&nbsp;Hz</strong> using compressed image transport</li>
+                        <li><strong>Camera-mount optimization in Isaac Sim:</strong> a rendering-and-scoring pipeline that evaluates candidate camera mounts across CAD parts spanning 90&ndash;565&nbsp;mm with multi-plane bolts, using a staged search over <strong>1,000 candidates</strong> to converge on one robust mount pose given part classification (size, access area, bolt spacing)</li>
+                        <li><strong>Controller tuning:</strong> tuned the MPC controller and implemented automatic weight tuning via <strong>preferential Bayesian optimization</strong> over 30 bolt positions, cutting mean settle time from 4.17&nbsp;s to 2.67&nbsp;s (31% reduction) on a FANUC arm</li>
+                        <li><strong>Throughput:</strong> extended working conveyor speed from 60 to 100&nbsp;mm/s on a UR10e, cutting cycle time up to <strong>5.9&times;</strong> (21.3&nbsp;s &rarr; 3.6&nbsp;s) while holding <strong>98% success across 150 runs</strong></li>
+                        <li><strong>Platform port:</strong> ported the stack to a FANUC CRX10iA-L, resolving driver-level jerk instability to sustain a continuous 159-cycle run, and authored a state machine for multi-plane fastening (bolts on multiple faces) reaching <strong>95% success across 200 runs</strong></li>
+                    </ul>
                     <div class="project-tech">
-                        <span class="tech-badge">Physics-Based Modeling</span>
-                        <span class="tech-badge">Differential Evolution</span>
-                        <span class="tech-badge">EIS</span>
-                        <span class="tech-badge">Li-ion Batteries</span>
-                        <span class="tech-badge">Constrained Optimization</span>
-                        <span class="tech-badge">Sensitivity Analysis</span>
+                        <span class="tech-badge">Visual Servoing</span>
+                        <span class="tech-badge">6D Pose Estimation</span>
+                        <span class="tech-badge">Model Predictive Control</span>
+                        <span class="tech-badge">Preferential Bayesian Optimization</span>
+                        <span class="tech-badge">Isaac Sim</span>
+                        <span class="tech-badge">ROS2</span>
+                        <span class="tech-badge">FANUC / UR10e</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Computational EM -->
-            <div class="category-section" id="cyscat">
+            <!-- Imitation Learning & VLAs -->
+            <div class="category-section" id="imitation-learning">
                 <h2 class="category-title">
-                    <span class="category-icon"><i class="fas fa-wave-square" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Computational Electromagnetics
+                    <span class="category-icon"><i class="fas fa-hand-sparkles" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Imitation Learning &amp; Vision-Language-Action Models
+                </h2>
+
+                <div class="project-detailed" id="act-so101">
+                    <div class="project-detailed-header">
+                        <h3>SO-101 Robot Arm &mdash; Pick-and-Place with Imitation Learning</h3>
+                        <span class="project-status">2026</span>
+                    </div>
+                    <p class="project-description">
+                        Collected teleoperated demonstrations through HuggingFace <strong>LeRobot</strong> and trained an <strong>ACT (Action Chunking with Transformers)</strong> policy for screwdriver pick-and-place from a single front-facing camera &mdash; no depth sensing, no explicit pose estimation, no scripted motion. Training was run on an AWS EC2 GPU instance and the resulting policy deployed back on the physical SO-101 arm.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Imitation Learning</span>
+                        <span class="tech-badge">ACT</span>
+                        <span class="tech-badge">Action Chunking</span>
+                        <span class="tech-badge">LeRobot</span>
+                        <span class="tech-badge">Teleoperation</span>
+                        <span class="tech-badge">AWS EC2</span>
+                    </div>
+                </div>
+
+                <div class="project-detailed" id="openvla">
+                    <div class="project-detailed-header">
+                        <h3>OpenVLA Fine-tuning for Robot Manipulation</h3>
+                        <a href="https://github.com/Thiruloksundar/OpenVLA-Libero-finetuning" class="github-link" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                    <p class="project-description">
+                        Fine-tuned <strong>OpenVLA</strong>, a 7B-parameter vision-language-action model, on the <strong>LIBERO</strong> manipulation benchmarks using <strong>LoRA</strong> adapters, deployed on UMich HPC (NVIDIA A40). Training loss dropped from <strong>19.08 to 1.16</strong> over three epochs. The project explores how far general-purpose VLA foundation models can be adapted to specific manipulation skills with parameter-efficient tuning instead of full retraining.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Vision-Language-Action</span>
+                        <span class="tech-badge">OpenVLA</span>
+                        <span class="tech-badge">LoRA</span>
+                        <span class="tech-badge">LIBERO</span>
+                        <span class="tech-badge">Foundation Models</span>
+                        <span class="tech-badge">PyTorch</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- World Models -->
+            <div class="category-section" id="world-models">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-diagram-project" style="font-size:1.8rem;color:var(--primary-color)"></i></span> World Models &amp; Representation Learning
+                </h2>
+
+                <div class="project-detailed" id="lewm">
+                    <div class="project-detailed-header">
+                        <h3>Regularizers for JEPA World Models (LeWM)</h3>
+                        <span class="project-status">Ongoing Research &mdash; University of Michigan</span>
+                    </div>
+                    <p class="project-description">
+                        Evaluated <strong>LeWM</strong>, a JEPA-based world model, replacing its <strong>SIGReg</strong> anti-collapse regularizer with <strong>free-energy</strong> and <strong>coding-rate</strong> objectives. Joint-embedding predictive architectures learn to predict in latent space rather than pixel space, which makes the choice of anti-collapse term the central design decision. On a two-room navigation dataset, the coding-rate variant lifted hard-protocol accuracy &mdash; 100-step planning &mdash; from <strong>16% to 75%</strong>.
+                    </p>
+                    <p class="project-description" style="margin-top: -0.5rem;">
+                        <em>With Prof. Raj Rao Nadakuditi, University of Michigan</em>
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">World Models</span>
+                        <span class="tech-badge">JEPA</span>
+                        <span class="tech-badge">Latent Planning</span>
+                        <span class="tech-badge">Self-Supervised Learning</span>
+                        <span class="tech-badge">Coding Rate</span>
+                    </div>
+                </div>
+
+                <div class="project-detailed" id="freegaussianizer">
+                    <div class="project-detailed-header">
+                        <h3>freegaussianizer &mdash; Free-Energy Loss for Representation Learning</h3>
+                        <a href="https://github.com/Thiruloksundar/FreeGaussianizer" class="github-link" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                    <p class="project-description">
+                        Showed that a <strong>free-energy (Gaussianizing) loss</strong> improves both reconstruction and classification across CNNs, MLPs, and autoencoders, and built a joint Gaussianizing classifier on top of it. Released as an open-source package with <a href="https://github.com/Thiruloksundar/FreeGaussianizer.jl" target="_blank">a Julia implementation</a> of the matricial free-energy loss alongside the Python version.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Representation Learning</span>
+                        <span class="tech-badge">Free Energy</span>
+                        <span class="tech-badge">Random Matrix Theory</span>
+                        <span class="tech-badge">Open Source</span>
+                        <span class="tech-badge">PyTorch</span>
+                        <span class="tech-badge">Julia</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLAM & Navigation -->
+            <div class="category-section" id="semantic-slam">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-compass" style="font-size:1.8rem;color:var(--primary-color)"></i></span> SLAM, Navigation &amp; State Estimation
                 </h2>
 
                 <div class="project-detailed">
                     <div class="project-detailed-header">
-                        <h3>CyScat.jl &mdash; Electromagnetic Scattering Matrix Computation</h3>
-                        <span class="project-status">Ongoing Research</span>
+                        <h3>Semantic LiDAR-SLAM with Language-Guided Navigation</h3>
+                        <span class="project-status">2026</span>
                     </div>
                     <p class="project-description">
-                        Translating the CyScat electromagnetic scattering simulation package from MATLAB to Julia and Python under <strong>Prof. Raj Rao Nadakuditi</strong>. CyScat computes S-matrices (scattering matrices) for periodic arrays of cylinders using the T-matrix multiple scattering method with Modified Shanks Transformation for convergence acceleration. The package supports dielectric and perfectly-conducting (PEC) cylinders, Floquet mode analysis, and cascading via the Redheffer star product.
+                        Integrated <strong>Cartographer SLAM</strong> with <strong>Grounding DINO</strong> in ROS2 and Gazebo. As the robot maps the environment, the open-vocabulary detector populates a <strong>persistent semantic map</strong>, so a natural-language command (&ldquo;go to the chair&rdquo;) resolves to a coordinate and triggers a Nav2 navigation goal. The result is <strong>zero-shot object-goal navigation</strong> &mdash; no environment-specific training and no fixed object vocabulary.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Cartographer SLAM</span>
+                        <span class="tech-badge">Grounding DINO</span>
+                        <span class="tech-badge">Open-Vocabulary Detection</span>
+                        <span class="tech-badge">Nav2</span>
+                        <span class="tech-badge">ROS2</span>
+                        <span class="tech-badge">Gazebo</span>
+                    </div>
+                </div>
+
+                <div class="project-detailed">
+                    <div class="project-detailed-header">
+                        <h3>Multi-Robot Exploration with Connectivity Constraints</h3>
+                        <a href="https://github.com/Thiruloksundar/Connected-Robot-Exploration" class="github-link" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                    <p class="project-description">
+                        Frontier-based multi-robot exploration in which the team must stay connected while covering an unknown map &mdash; coordinating goal assignment against a connectivity constraint rather than letting robots greedily disperse.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Multi-Robot Systems</span>
+                        <span class="tech-badge">Exploration Planning</span>
+                        <span class="tech-badge">Connectivity Maintenance</span>
+                        <span class="tech-badge">ROS2</span>
+                    </div>
+                </div>
+
+                <div class="project-detailed">
+                    <div class="project-detailed-header">
+                        <h3>Autonomous Navigation for a Differential-Drive Robot</h3>
+                        <a href="https://github.com/Thiruloksundar/Autonomous-Robot-Navigation" class="github-link" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                    <p class="project-description">
+                        Complete autonomous navigation system for a differential-drive mobile robot built on ROS2 and the Nav2 stack &mdash; mapping, localization, global and local planning, and recovery behaviors.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">ROS2</span>
+                        <span class="tech-badge">Nav2</span>
+                        <span class="tech-badge">Path Planning</span>
+                        <span class="tech-badge">Localization</span>
+                    </div>
+                </div>
+
+                <div class="project-detailed">
+                    <div class="project-detailed-header">
+                        <h3>PR2 Robot State Estimation</h3>
+                        <a href="https://github.com/Thiruloksundar/robot_state_estimation" class="github-link" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                    <p class="project-description">
+                        State estimation for the PR2 robot using Kalman and particle filters, comparing parametric and sample-based belief representations under noisy motion and measurement models.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">State Estimation</span>
+                        <span class="tech-badge">Kalman Filter</span>
+                        <span class="tech-badge">Particle Filter</span>
+                        <span class="tech-badge">Mobile Robotics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Computer Vision -->
+            <div class="category-section" id="cv-projects">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-eye" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Computer Vision &amp; 3D Perception
+                </h2>
+
+                <div class="project-detailed">
+                    <div class="project-detailed-header">
+                        <h3>Challenges in Multi-view 3D Scene Reconstruction</h3>
+                        <span class="project-status">Course Project</span>
+                    </div>
+                    <p class="project-description">
+                        Analyzed failure cases of <strong>MASt3R</strong>, a state-of-the-art multi-view 3D reconstruction method, under challenging capture conditions. Collected and annotated a custom scene dataset with varying lighting, occlusions, and viewpoint distributions, then documented systematic limitations and proposed improvements for robust reconstruction.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">3D Reconstruction</span>
+                        <span class="tech-badge">Multi-view Geometry</span>
+                        <span class="tech-badge">MASt3R</span>
+                        <span class="tech-badge">Dataset Creation</span>
+                    </div>
+                </div>
+
+                <div class="project-detailed">
+                    <div class="project-detailed-header">
+                        <h3>Warehouse Perception &mdash; Multi-head Mask R-CNN</h3>
+                        <span class="project-status">Mowito &mdash; Production</span>
+                    </div>
+                    <p class="project-description">
+                        Developed multi-head Mask R-CNN models for instance segmentation and object detection in warehouse environments and integrated them into production robot perception pipelines. Implemented perceptual hashing for large-scale dataset deduplication (30% size reduction) and built order-fulfillment optimization using Leiden clustering.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Mask R-CNN</span>
+                        <span class="tech-badge">Instance Segmentation</span>
+                        <span class="tech-badge">Perceptual Hashing</span>
+                        <span class="tech-badge">Leiden Clustering</span>
+                        <span class="tech-badge">Production ML</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Differentiable Simulation -->
+            <div class="category-section" id="cyscat">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-wave-square" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Differentiable Simulation &amp; Optimization
+                </h2>
+
+                <div class="project-detailed">
+                    <div class="project-detailed-header">
+                        <h3>CyScat.jl &mdash; Differentiable Electromagnetic Scattering Simulation</h3>
+                        <a href="https://github.com/Thiruloksundar/CyScat.jl" class="github-link" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                    <p class="project-description">
+                        Translating the CyScat electromagnetic scattering simulation package from MATLAB to <strong>Julia and Python</strong> under <strong>Prof. Raj Rao Nadakuditi</strong>. CyScat computes scattering matrices for periodic arrays of cylinders using the T-matrix multiple-scattering method with Modified Shanks Transformation for convergence acceleration, supporting dielectric and perfectly-conducting cylinders, Floquet mode analysis, and cascading via the Redheffer star product.
                     </p>
                     <p class="project-description" style="margin-top: -0.5rem;">
-                        Through this work, I gained understanding of <strong>wavefront optimization via singular value decomposition</strong> of scattering matrices: the first right singular vector of S<sub>11</sub> gives the optimal wavefront to maximize reflection, and of S<sub>21</sub> to maximize transmission (open eigenchannels). The video below shows a simulation of an optimized wavefront tunneling through an S-shaped PEC maze with ~99.9% transmission, compared to only ~8.5% for normal incidence.
+                        I implemented <strong>differentiable physical simulation</strong> via forward-mode automatic differentiation straight through the T-matrix solver, so gradients flow from the transmitted field back to physical design variables &mdash; enabling gradient-based optimization of refractive index and wavelength for maximum transmission through photonic structures. Derivatives were validated against finite-difference checks to machine precision.
+                    </p>
+                    <p class="project-description" style="margin-top: -0.5rem;">
+                        The same machinery gives <strong>wavefront optimization via SVD</strong> of the scattering matrix: the first right singular vector of S<sub>11</sub> is the wavefront that maximizes reflection, and of S<sub>21</sub> the open eigenchannel that maximizes transmission. The video below shows an optimized wavefront tunneling through an S-shaped PEC maze at ~99.9% transmission, against only ~8.5% for normal incidence.
                     </p>
 
                     <!-- Video -->
@@ -113,114 +318,23 @@
                         <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.75rem;">
                             <em>Open eigenchannel wavefront routing through an S-shaped PEC maze: normal incidence (8.5% transmission) vs. optimal wavefront (99.9% transmission)</em>
                         </p>
-                        <div style="margin-top: 0.5rem;">
-                            <a href="media/s_channel_maze.mp4" download class="pub-link" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-                                <i class="fas fa-download"></i> Download Video (MP4)
-                            </a>
-                        </div>
                     </div>
 
                     <div class="project-tech">
+                        <span class="tech-badge">Differentiable Programming</span>
+                        <span class="tech-badge">Automatic Differentiation</span>
+                        <span class="tech-badge">Gradient-Based Optimization</span>
                         <span class="tech-badge">Julia</span>
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Scattering Matrices</span>
                         <span class="tech-badge">SVD / Eigenchannels</span>
-                        <span class="tech-badge">Floquet Modes</span>
-                        <span class="tech-badge">Multiple Scattering</span>
                     </div>
                 </div>
             </div>
 
-            <!-- ML for Time-Series -->
-            <div class="category-section" id="aging-prediction">
+            <!-- Multimodal ML -->
+            <div class="category-section" id="multimodal">
                 <h2 class="category-title">
-                    <span class="category-icon"><i class="fas fa-brain" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Machine Learning for Time-Series Prediction
-                </h2>
-
-                <div class="project-detailed">
-                    <div class="project-detailed-header">
-                        <h3>Attention-Enhanced Seq2Seq Models for Battery Aging Prediction</h3>
-                        <span class="project-status">Ongoing Research</span>
-                    </div>
-                    <p class="project-description">
-                        Developed sequence-to-sequence deep learning models for predicting NMC battery capacity degradation trajectories from early-life cycling data. The model takes the first ~30% of a cell's capacity-fade curve and predicts the complete remaining trajectory. Key innovations include:
-                    </p>
-                    <ul style="color: var(--text-secondary); margin: -0.5rem 0 1rem 1.5rem; line-height: 1.8;">
-                        <li><strong>Bahdanau attention mechanism</strong> with a bidirectional LSTM encoder, allowing the decoder to selectively attend to relevant past timesteps</li>
-                        <li><strong>Adaptive variable-length sequence handling</strong> with custom collation and masked loss computation for cells with different lifetimes</li>
-                        <li><strong>Combined loss function</strong> (MSE + MAE + trend-preservation) to maintain trajectory shape fidelity</li>
-                        <li><strong>Early-life feature conditioning</strong> via PCA-reduced cycling characteristics to improve generalization across operating conditions</li>
-                    </ul>
-                    <p class="project-description">
-                        Achieves <strong>2&ndash;5% MAPE</strong> on held-out test sets with robust generalization across C-rates and depths of discharge. Evaluated on 225 NMC cells with separate in-distribution and out-of-distribution test sets.
-                    </p>
-                    <p class="project-description" style="margin-top: -0.5rem;">
-                        <em>Electric Vehicle Center, University of Michigan &mdash; Prof. Ziyou Song</em>
-                    </p>
-
-                    <!-- Results Images -->
-                    <div style="margin: 1.5rem 0;">
-                        <h4 style="margin-bottom: 0.75rem; color: var(--text-primary);">Results</h4>
-
-                        <div style="margin-bottom: 1.5rem; text-align: center; background: var(--bg-color); padding: 1rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-                            <img src="media/adaptive_seq2seq_attention.png" alt="Attention-enhanced Seq2Seq results: performance metrics, sample trajectories, and error distributions" style="max-width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
-                            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.75rem;">
-                                <em>Attention-enhanced adaptive Seq2Seq: performance comparison, sample predictions, error distributions, and model insights</em>
-                            </p>
-                            <a href="media/adaptive_seq2seq_attention.png" download class="pub-link" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
-                                <i class="fas fa-download"></i> Download Image (PNG)
-                            </a>
-                        </div>
-
-                        <div style="margin-bottom: 1.5rem; text-align: center; background: var(--bg-color); padding: 1rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-                            <img src="media/encoder_ratio_analysis.png" alt="Encoder ratio analysis: impact of encoder/decoder split on prediction accuracy" style="max-width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
-                            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.75rem;">
-                                <em>Encoder ratio analysis: impact of encoder/decoder data split on MAPE, RMSE, and sequence lengths</em>
-                            </p>
-                            <a href="media/encoder_ratio_analysis.png" download class="pub-link" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
-                                <i class="fas fa-download"></i> Download Image (PNG)
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-tech">
-                        <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">Seq2Seq</span>
-                        <span class="tech-badge">Attention Mechanism</span>
-                        <span class="tech-badge">Bidirectional LSTM</span>
-                        <span class="tech-badge">Time-Series Prediction</span>
-                        <span class="tech-badge">Battery Degradation</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Computer Vision & 3D Reconstruction -->
-            <div class="category-section" id="cv-projects">
-                <h2 class="category-title">
-                    <span class="category-icon"><i class="fas fa-eye" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Computer Vision & 3D Reconstruction
-                </h2>
-
-                <div class="project-detailed">
-                    <div class="project-detailed-header">
-                        <h3>Challenges in Multi-view 3D Scene Reconstruction</h3>
-                        <span class="project-status">Course Project</span>
-                    </div>
-                    <p class="project-description">
-                        Analyzed failure cases of the state-of-the-art multi-view 3D reconstruction method MASt3R under challenging capture conditions. Collected and annotated a custom scene dataset with varying lighting, occlusions, and viewpoint distributions. Documented systematic limitations of current methods and proposed potential improvements for robust multi-view reconstruction.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">3D Reconstruction</span>
-                        <span class="tech-badge">Multi-view Geometry</span>
-                        <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">Dataset Creation</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Other ML / Audio -->
-            <div class="category-section">
-                <h2 class="category-title">
-                    <span class="category-icon"><i class="fas fa-microphone" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Other Machine Learning Research
+                    <span class="category-icon"><i class="fas fa-microphone" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Multimodal Machine Learning
                 </h2>
 
                 <div class="project-detailed">
@@ -229,16 +343,16 @@
                         <span class="project-status">Submitted to Interspeech 2026</span>
                     </div>
                     <p class="project-description">
-                        Created a benchmark audio dataset with 1M+ samples using multiple TTS models with paired real/fake audios. Trained an audio-language detection model that outperforms human listeners and achieves state-of-the-art performance. Eliminating linguistic cues forced the model to rely solely on acoustic artifacts, making it robust to content variation.
+                        Built an end-to-end data generation and labeling pipeline to curate a benchmark of <strong>1M+ paired real/synthetic audio samples</strong> using multiple TTS systems. Fine-tuned the <strong>CLAP</strong> audio-language model to <strong>97% accuracy</strong>, outperforming human listeners. Because the paired construction eliminates linguistic cues, the model must rely purely on acoustic artifacts, making it robust to content variation.
                     </p>
                     <p class="project-description" style="margin-top: -0.5rem;">
                         <em>Carnegie Mellon University &mdash; Dr. Arun Balajee Vasudevan</em>
                     </p>
                     <div class="project-tech">
-                        <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">Audio ML</span>
-                        <span class="tech-badge">TTS Systems</span>
+                        <span class="tech-badge">Multimodal ML</span>
                         <span class="tech-badge">CLAP</span>
+                        <span class="tech-badge">Audio-Language Models</span>
+                        <span class="tech-badge">TTS Systems</span>
                         <span class="tech-badge">Dataset Engineering</span>
                     </div>
                 </div>
@@ -247,7 +361,7 @@
             <!-- Achievements -->
             <div class="achievements-section">
                 <h2 class="category-title">
-                    <span class="category-icon"><i class="fas fa-trophy" style="font-size:1.8rem;color:#92400e"></i></span> Achievements & Competitions
+                    <span class="category-icon"><i class="fas fa-trophy" style="font-size:1.8rem;color:#92400e"></i></span> Achievements &amp; Competitions
                 </h2>
 
                 <div class="achievement-grid">
@@ -265,7 +379,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Thirulok Sundar Mohan Rasu. Last updated: March 2026</p>
+            <p>&copy; 2026 Thirulok Sundar Mohan Rasu. Last updated: August 2026</p>
             <div class="footer-links">
                 <a href="mailto:thirulok@umich.edu"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/Thiruloksundar" target="_blank"><i class="fab fa-github"></i></a>

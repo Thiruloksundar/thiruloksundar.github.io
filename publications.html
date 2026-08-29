@@ -15,11 +15,11 @@
             <a href="index.html" class="logo">Thirulok Sundar</a>
             <ul class="nav-menu">
                 <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="index.html#research" class="nav-link">Research</a></li>
+                <li><a href="index.html#research" class="nav-link">Areas</a></li>
                 <li><a href="index.html#experience" class="nav-link">Experience</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="publications.html" class="nav-link active">Publications</a></li>
-                <li><a href="docs/CV.pdf" class="nav-link" target="_blank">Resume</a></li>
+                <li><a href="docs/Thirulok_Sundar_Resume.pdf" class="nav-link" target="_blank">Resume</a></li>
                 <li><a href="docs/UM_transcript.pdf" class="nav-link" target="_blank">Transcript</a></li>
             </ul>
             <div class="hamburger">
@@ -41,45 +41,6 @@
     <!-- Publications Section -->
     <section class="section publications-section">
         <div class="container">
-            <!-- Under Review / Preprints Section -->
-            <div class="year-section">
-                <h2 class="year-title">Under Review / In Preparation</h2>
-
-                <div class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Degradation-Constrained Optimization of Solid Electrolyte Interphase Parameters from Electrochemical Impedance Spectroscopy Using a Hybrid Physics-Based Model</h3>
-                        <div class="publication-badges">
-                            <span class="badge badge-preprint">Preprint</span>
-                        </div>
-                    </div>
-
-                    <p class="publication-authors">
-                        <strong>Thirulok Sundar</strong>, Jiawei Zhang, Ziyou Song
-                    </p>
-
-                    <p class="publication-venue">
-                        <em>Draft in preparation</em>
-                    </p>
-
-                    <p class="publication-abstract">
-                        A hybrid EIS model coupling a physics-based transmission-line SEI impedance formulation with a compact ECM representation. Degradation-aware constraints embedded in a differential evolution optimizer enforce monotonic SEI growth from BOL to EOL. Validated on 6 commercial Li-ion cells across multiple SOC levels, yielding 1.7% MAP error. OAT sensitivity analysis identifies L<sub>SEI</sub> and &sigma;<sub>SEI</sub> as the dominant parameters governing the high-frequency SEI arc.
-                    </p>
-
-                    <div class="publication-links">
-                        <a href="Hybrid_Physics_model_for_EIS.pdf" class="pub-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper Draft
-                        </a>
-                    </div>
-
-                    <div class="publication-topics">
-                        <span class="topic-tag">Physics-Based Modeling</span>
-                        <span class="topic-tag">Electrochemical Impedance</span>
-                        <span class="topic-tag">Differential Evolution</span>
-                        <span class="topic-tag">Li-ion Batteries</span>
-                    </div>
-                </div>
-            </div>
-
             <!-- Under Review -->
             <div class="year-section">
                 <h2 class="year-title">Submitted / Under Review</h2>
@@ -120,10 +81,77 @@
                 </div>
             </div>
 
+            <!-- Ongoing Research -->
+            <div class="year-section">
+                <h2 class="year-title">Ongoing Research</h2>
+
+                <div class="publication-item">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Anti-Collapse Regularizers for JEPA World Models: Free-Energy and Coding-Rate Alternatives to SIGReg</h3>
+                        <div class="publication-badges">
+                            <span class="badge badge-preprint">In Progress</span>
+                        </div>
+                    </div>
+
+                    <p class="publication-authors">
+                        <strong>Thirulok Sundar Mohan Rasu</strong>, Raj Rao Nadakuditi
+                    </p>
+
+                    <p class="publication-venue">
+                        <em>University of Michigan &mdash; ongoing</em>
+                    </p>
+
+                    <p class="publication-abstract">
+                        Joint-embedding predictive architectures predict in latent space rather than pixel space, which makes the anti-collapse regularizer the central design decision. We evaluate the LeWM world model with free-energy and coding-rate regularizers as replacements for SIGReg, improving hard-protocol (100-step planning) accuracy on a two-room navigation dataset from 16% to 75% with the coding-rate variant.
+                    </p>
+
+                    <div class="publication-topics">
+                        <span class="topic-tag">World Models</span>
+                        <span class="topic-tag">JEPA</span>
+                        <span class="topic-tag">Latent Planning</span>
+                        <span class="topic-tag">Self-Supervised Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Open Source -->
+            <div class="year-section">
+                <h2 class="year-title">Open-Source Software</h2>
+
+                <div class="publication-item">
+                    <div class="publication-header">
+                        <h3 class="publication-title">freegaussianizer &mdash; Matricial Free-Energy Loss for Representation Learning</h3>
+                        <div class="publication-badges">
+                            <span class="badge badge-preprint">Package</span>
+                        </div>
+                    </div>
+
+                    <p class="publication-abstract">
+                        A free-energy (Gaussianizing) loss that improves reconstruction and classification across CNNs, MLPs, and autoencoders, together with a joint Gaussianizing classifier. Released in both Python and Julia.
+                    </p>
+
+                    <div class="publication-links">
+                        <a href="https://github.com/Thiruloksundar/FreeGaussianizer" class="pub-link" target="_blank">
+                            <i class="fab fa-github"></i> Python
+                        </a>
+                        <a href="https://github.com/Thiruloksundar/FreeGaussianizer.jl" class="pub-link" target="_blank">
+                            <i class="fab fa-github"></i> Julia
+                        </a>
+                    </div>
+
+                    <div class="publication-topics">
+                        <span class="topic-tag">Representation Learning</span>
+                        <span class="topic-tag">Free Energy</span>
+                        <span class="topic-tag">Random Matrix Theory</span>
+                        <span class="topic-tag">Open Source</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Call to Action -->
             <div class="cta-box">
                 <h3>Interested in Collaboration?</h3>
-                <p>I'm actively looking for summer research opportunities in scientific ML, physics-informed modeling, and computational optimization. Feel free to reach out!</p>
+                <p>I'm looking for full-time robotics software, perception, and ML roles starting after I graduate in December 2026, and I'm always glad to talk about world models, imitation learning, and foundation models for robotics. Feel free to reach out!</p>
                 <a href="mailto:thirulok@umich.edu" class="btn-primary">Get in Touch</a>
             </div>
         </div>
@@ -132,7 +160,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Thirulok Sundar Mohan Rasu. Last updated: March 2026</p>
+            <p>&copy; 2026 Thirulok Sundar Mohan Rasu. Last updated: August 2026</p>
             <div class="footer-links">
                 <a href="mailto:thirulok@umich.edu"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/Thiruloksundar" target="_blank"><i class="fab fa-github"></i></a>

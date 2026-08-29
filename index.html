@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thirulok Sundar Mohan Rasu | ML, Physics-Informed & Robotics Models</title>
+    <title>Thirulok Sundar Mohan Rasu | Robotics, Software & Machine Learning</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="publications.html" class="nav-link">Publications</a></li>
-                <li><a href="docs/CV.pdf" class="nav-link" target="_blank">Resume</a></li>
+                <li><a href="docs/Thirulok_Sundar_Resume.pdf" class="nav-link" target="_blank">Resume</a></li>
                 <li><a href="docs/UM_transcript.pdf" class="nav-link" target="_blank">Transcript</a></li>
             </ul>
             <div class="hamburger">
@@ -35,7 +35,7 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Thirulok Sundar Mohan Rasu</h1>
-                <p class="hero-subtitle">MS Student in Electrical & Computer Engineering</p>
+                <p class="hero-subtitle">MS Student in Electrical &amp; Computer Engineering (Computer Vision)</p>
                 <p class="hero-location">University of Michigan, Ann Arbor &mdash; GPA: 4.0/4.0</p>
                 <div class="hero-links">
                     <a href="mailto:thirulok@umich.edu" class="hero-link"><i class="fas fa-envelope"></i> Email</a>
@@ -55,42 +55,48 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p class="intro-text">
-                    I am a Master's student in Electrical and Computer Engineering at the <strong>University of Michigan, Ann Arbor</strong>. I build <strong>ML models, physics-informed computational models/simulations, and robotics and optimization algorithms</strong> for real-world systems &mdash; from battery characterization and aging prediction to electromagnetic scattering simulations, autonomous robot navigation, and 3D scene understanding.
+                    I am a Master's student in Electrical and Computer Engineering (Computer Vision) at the <strong>University of Michigan, Ann Arbor</strong>. I build <strong>robotics software, perception, and machine learning systems</strong> for real-world robots &mdash; visual servoing and pose estimation for industrial manipulation, imitation learning and vision-language-action policies for robot arms, SLAM with language-guided navigation, and world models for long-horizon planning.
                 </p>
                 <p>
-                    I work with <strong>Prof. Ziyou Song</strong> at the Electric Vehicle Center on physics-informed EIS models and ML-based battery aging prediction. I work with <strong>Prof. Raj Rao Nadakuditi</strong> on differentiable physical simulations and gradient-based optimization for electromagnetic scattering systems. I also work at the <strong>HDR Lab</strong> on real-time 3D depth estimation for visuo-tactile sensors on robotic arms.
+                    Most recently I was a <strong>Robotics Software Intern at Mowito</strong>, where I built a visual-servoing auto-fastening stack that derives target poses from a single demonstration &mdash; enabling CAD-free robotic bolt fastening on parts moving on a conveyor &mdash; and deployed it on FANUC and UR10e arms.
                 </p>
                 <p>
-                    Before joining UMich, I completed my B.Tech in Electrical Engineering from <strong>IIT (ISM) Dhanbad</strong>, building a foundation in machine learning, computer vision, and robotics software. I am actively looking for summer internship opportunities.
+                    As a <strong>Graduate Research Assistant</strong> at UMich I work on JEPA-based world models for planning and on differentiable physical simulation with gradient-based optimization for electromagnetic scattering systems (with <strong>Prof. Raj Rao Nadakuditi</strong>). Before that, at <strong>Carnegie Mellon University</strong>, I trained multimodal audio-language models for deepfake speech detection (paper under review at Interspeech 2026).
+                </p>
+                <p>
+                    I completed my B.Tech in Electrical Engineering from <strong>IIT (ISM) Dhanbad</strong>, where I was a member of CyberLabs (Machine Learning).
+                </p>
+                <p>
+                    I graduate in <strong>December 2026</strong> and am currently looking for <strong>full-time robotics software, perception, and ML engineering roles</strong> &mdash; ideally where research ideas get shipped onto real hardware, the way my work at Mowito went from a single demonstration to a fastening cell running on FANUC and UR10e arms. Longer term I intend to return to academia for a <strong>PhD</strong> in robot learning &mdash; world models, imitation learning, and foundation models for manipulation &mdash; so I keep publishing and contributing open source alongside engineering work.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Research Interests -->
+    <!-- Technical Areas -->
     <section id="research" class="section research-section">
         <div class="container">
             <h2 class="section-title">Technical Areas</h2>
             <div class="research-grid">
                 <div class="research-card">
-                    <div class="research-icon"><i class="fas fa-brain" style="font-size:2.5rem;color:var(--primary-color)"></i></div>
-                    <h3>Machine Learning</h3>
-                    <p>Building deep learning models for real-world prediction &mdash; attention-enhanced Seq2Seq models for time-series forecasting, multimodal model fine-tuning, and end-to-end ML pipelines on large-scale datasets</p>
-                </div>
-                <div class="research-card">
-                    <div class="research-icon"><i class="fas fa-atom" style="font-size:2.5rem;color:var(--primary-color)"></i></div>
-                    <h3>Physics-Informed Models & Simulations</h3>
-                    <p>Coupling first-principles equations with data-driven methods &mdash; physics-informed EIS models for battery characterization, differentiable physical simulations with gradient-based optimization for inverse design</p>
-                </div>
-                <div class="research-card">
                     <div class="research-icon"><i class="fas fa-robot" style="font-size:2.5rem;color:var(--primary-color)"></i></div>
-                    <h3>Foundation Models for Robotics</h3>
-                    <p>Applying large foundation models to physical robot systems &mdash; fine-tuning vision-language-action models (OpenVLA) for robot manipulation, and integrating vision foundation models (Grounding DINO) with SLAM for language-guided autonomous navigation</p>
+                    <h3>Robot Manipulation &amp; Visual Servoing</h3>
+                    <p>Pose estimation from a single demonstration, detector-free semi-dense matching and real-time tracking, MPC tuning via preferential Bayesian optimization, and Isaac Sim camera-placement optimization for CAD-free robotic fastening</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-brain" style="font-size:2.5rem;color:var(--primary-color)"></i></div>
+                    <h3>Imitation Learning &amp; VLA Foundation Models</h3>
+                    <p>Action Chunking with Transformers (ACT) policies from teleoperated demonstrations, LoRA fine-tuning of vision-language-action models (OpenVLA), and LeRobot data pipelines for robot arms</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-compass" style="font-size:2.5rem;color:var(--primary-color)"></i></div>
+                    <h3>SLAM &amp; Language-Guided Navigation</h3>
+                    <p>Cartographer / LiDAR SLAM in ROS2, persistent semantic mapping with vision foundation models (Grounding DINO), and zero-shot object-goal navigation through Nav2 without environment-specific training</p>
                 </div>
                 <div class="research-card">
                     <div class="research-icon"><i class="fas fa-cube" style="font-size:2.5rem;color:var(--primary-color)"></i></div>
-                    <h3>Computer Vision & 3D Reconstruction</h3>
-                    <p>Applying deep learning for object detection, instance segmentation, depth estimation, and multi-view 3D scene reconstruction in scientific and engineering applications</p>
+                    <h3>Perception, World Models &amp; Differentiable Simulation</h3>
+                    <p>JEPA-based world models for long-horizon planning, multi-view 3D scene reconstruction, deepfake audio detection, and differentiable physical simulation with gradient-based inverse design</p>
                 </div>
             </div>
         </div>
@@ -102,20 +108,24 @@
             <h2 class="section-title">Recent Updates</h2>
             <div class="news-timeline">
                 <div class="news-item">
-                    <span class="news-date">Mar 2026</span>
-                    <p>Working on <strong>hybrid physics-based EIS model</strong> paper draft for SEI characterization in Li-ion batteries (with Prof. Ziyou Song)</p>
+                    <span class="news-date">Aug 2026</span>
+                    <p>Wrapped up my <strong>Robotics Software Internship at Mowito</strong> &mdash; shipped visual-servoing auto-fastening on FANUC CRX10iA-L and UR10e arms</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">May 2026</span>
+                    <p>Started as <strong>Robotics Software Intern at Mowito</strong>, working on visual-servoing-based CAD-free robotic fastening</p>
                 </div>
                 <div class="news-item">
                     <span class="news-date">Jan 2026</span>
-                    <p>Started working with <strong>Prof. Raj Rao Nadakuditi</strong> on translating and understanding electromagnetic scattering simulation codebase</p>
+                    <p>Joined UMich research on <strong>JEPA-based world models</strong> for planning and differentiable electromagnetic-scattering simulation (Prof. Raj Rao Nadakuditi); released the <strong>freegaussianizer</strong> open-source package</p>
                 </div>
                 <div class="news-item">
-                    <span class="news-date">Oct 2025</span>
-                    <p>Joined the <strong>Electric Vehicle Center</strong> (Prof. Ziyou Song) working on physics-based battery modeling and ML-based aging prediction</p>
+                    <span class="news-date">Sep 2025</span>
+                    <p>Deepfake speech detection paper submitted to <strong>Interspeech 2026</strong> (CMU, under review)</p>
                 </div>
                 <div class="news-item">
                     <span class="news-date">Aug 2025</span>
-                    <p>Started MS in ECE at <strong>University of Michigan</strong></p>
+                    <p>Started MS in ECE (Computer Vision) at <strong>University of Michigan</strong></p>
                 </div>
             </div>
         </div>
@@ -124,23 +134,24 @@
     <!-- Experience Section -->
     <section id="experience" class="section experience-section">
         <div class="container">
-            <h2 class="section-title">Research Experience</h2>
+            <h2 class="section-title">Experience</h2>
             <div class="experience-timeline">
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-                            <h3>Graduate Research Assistant</h3>
-                            <p class="experience-org">Electric Vehicle Center, University of Michigan &mdash; Prof. Ziyou Song</p>
+                            <h3>Robotics Software Intern</h3>
+                            <p class="experience-org">Mowito</p>
                         </div>
-                        <span class="experience-date">Oct 2025 &ndash; Present</span>
+                        <span class="experience-date">May 2026 &ndash; Aug 2026</span>
                     </div>
-                    <p class="experience-desc">Built physics-informed EIS models for Li-ion battery characterization, extracting degradation parameters (SEI, LAM, LLI) from BOL to EOL via Differential Evolution optimization &mdash; achieving 1.7% mean error across 117 spectra. Developed attention-enhanced Seq2Seq models for battery aging prediction, achieving 2&ndash;5% MAPE on capacity-fade trajectories from the first 30% of cycling data across 225 cells. Designed accelerated test protocol frameworks converting real-world driving profiles to battery power demand cycles.</p>
+                    <p class="experience-desc">Enhanced the full software stack for a visual-servoing-based auto-fastening system that derives target poses from a single demonstration, enabling CAD-free robotic bolt fastening on parts moving on a conveyor; demonstrated the system to investors, customers, and integrators. Added a detector-free semi-dense matching method and a real-time tracker so pose estimation stays robust through occlusion and low-texture parts, raising vision-stack throughput from 14.5&nbsp;Hz to 21&nbsp;Hz via compressed image transport. Built an Isaac Sim camera-mount pose optimization pipeline that renders and scores candidate mounts across CAD parts (90&ndash;565&nbsp;mm) with multi-plane bolts via staged search over 1,000 candidates. Tuned the MPC controller with automatic weight tuning via preferential Bayesian optimization across 30 bolt positions, cutting mean settle time from 4.17&nbsp;s to 2.67&nbsp;s (31%) on a FANUC arm. Extended working conveyor speed from 60 to 100&nbsp;mm/s on a UR10e, cutting cycle time up to 5.9&times; (21.3&nbsp;s to 3.6&nbsp;s) while holding 98% success across 150 runs. Ported the stack to a FANUC CRX10iA-L, resolving driver-level jerk instability to sustain a continuous 159-cycle run, and authored a state machine for multi-plane fastening reaching 95% success across 200 runs.</p>
                     <div class="experience-tags">
-                        <span class="tag">Physics-Informed Modeling</span>
-                        <span class="tag">Seq2Seq</span>
-                        <span class="tag">Time-Series ML</span>
-                        <span class="tag">Optimization</span>
-                        <span class="tag">Battery Systems</span>
+                        <span class="tag">Visual Servoing</span>
+                        <span class="tag">Pose Estimation</span>
+                        <span class="tag">MPC</span>
+                        <span class="tag">Bayesian Optimization</span>
+                        <span class="tag">Isaac Sim</span>
+                        <span class="tag">ROS2</span>
                     </div>
                 </div>
 
@@ -152,30 +163,14 @@
                         </div>
                         <span class="experience-date">Jan 2026 &ndash; Present</span>
                     </div>
-                    <p class="experience-desc">Translating the CyScat electromagnetic scattering simulation codebase from MATLAB to Julia and Python; implemented differentiable physical simulation via forward-mode automatic differentiation through the T-matrix solver, enabling gradient-based optimization to find optimal refractive index and wavelength configurations for maximum wave transmission through photonic structures. Validated numerical precision against finite-difference checks to machine precision.</p>
+                    <p class="experience-desc">Evaluating <strong>LeWM</strong>, a JEPA-based world model, with free-energy and coding-rate regularizers as replacements for the SIGReg anti-collapse regularizer &mdash; improving hard-protocol (100-step planning) accuracy on a two-room navigation dataset from 16% to 75% with the coding-rate variant. Showed that a free-energy (Gaussianizing) loss improves reconstruction and classification across CNNs, MLPs, and autoencoders, built a joint Gaussianizing classifier, and published <strong>freegaussianizer</strong> as an open-source package. Separately, translating the CyScat electromagnetic-scattering simulation codebase from MATLAB to Julia and Python and implementing differentiable simulation via forward-mode automatic differentiation through the T-matrix solver, enabling gradient-based optimization of refractive index and wavelength for maximum wave transmission through photonic structures; validated to machine precision against finite-difference checks.</p>
                     <div class="experience-tags">
-                        <span class="tag">Physical Simulation</span>
-                        <span class="tag">Differentiable Programming</span>
+                        <span class="tag">World Models</span>
+                        <span class="tag">JEPA</span>
+                        <span class="tag">Representation Learning</span>
+                        <span class="tag">Differentiable Simulation</span>
                         <span class="tag">Gradient-Based Optimization</span>
                         <span class="tag">Julia</span>
-                        <span class="tag">Scattering Matrices</span>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3>Graduate Research Assistant</h3>
-                            <p class="experience-org">HDR Lab, University of Michigan</p>
-                        </div>
-                        <span class="experience-date">Jan 2026 &ndash; Present</span>
-                    </div>
-                    <p class="experience-desc">Developing real-time 3D depth estimation algorithms for visuo-tactile sensors on robotic arms. Built an iOS app for automated hardware data collection enabling large-scale dataset generation for model training and evaluation.</p>
-                    <div class="experience-tags">
-                        <span class="tag">3D Depth Estimation</span>
-                        <span class="tag">Robot Perception</span>
-                        <span class="tag">Sensor Fusion</span>
-                        <span class="tag">Data Collection</span>
                     </div>
                 </div>
 
@@ -185,9 +180,9 @@
                             <h3>Research Intern</h3>
                             <p class="experience-org">Carnegie Mellon University &mdash; Dr. Arun Balajee Vasudevan</p>
                         </div>
-                        <span class="experience-date">Jan 2024 &ndash; Sep 2025</span>
+                        <span class="experience-date">Jan 2025 &ndash; Sep 2025</span>
                     </div>
-                    <p class="experience-desc">Engineered end-to-end data generation and labeling pipelines to curate a 1M+ sample dataset of real/synthetic audio pairs. Fine-tuned CLAP audio-language model and Llama-8B for deepfake speech detection, achieving 90% accuracy. Paper submitted to Interspeech 2026 (under review).</p>
+                    <p class="experience-desc">Engineered an end-to-end data generation and labeling pipeline to curate a 1M+ sample dataset of real/synthetic audio pairs in structured JSON. Fine-tuned the CLAP audio-language model achieving 97% accuracy on deepfake speech detection, outperforming human listeners. Paper submitted to Interspeech 2026 (under review).</p>
                     <div class="experience-tags">
                         <span class="tag">Multimodal ML</span>
                         <span class="tag">Model Fine-tuning</span>
@@ -204,7 +199,7 @@
                         </div>
                         <span class="experience-date">Mar 2023 &ndash; Jul 2023</span>
                     </div>
-                    <p class="experience-desc">Developed Multi-head Mask R-CNN models for instance segmentation and object detection in warehouse environments; integrated into production robot perception pipelines. Implemented perceptual hashing for large-scale dataset deduplication (30% size reduction) and built order-fulfillment optimization using Leiden clustering.</p>
+                    <p class="experience-desc">Developed Multi-head Mask R-CNN models for instance segmentation and object detection in warehouse environments and integrated them into production robot perception pipelines. Implemented perceptual hashing for large-scale dataset deduplication (30% size reduction) and built order-fulfillment optimization using Leiden clustering.</p>
                     <div class="experience-tags">
                         <span class="tag">Mask R-CNN</span>
                         <span class="tag">Robot Perception</span>
@@ -222,19 +217,19 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Physics-Based EIS Modeling of Li-ion Batteries</h3>
-                    <p>Hybrid physics-based SEI impedance model with degradation-constrained differential evolution optimization, achieving 1.7% mean error across 6 cells and 117 EIS spectra</p>
-                    <a href="projects.html#eis-modeling" class="project-link">Learn More &rarr;</a>
+                    <h3>Visual-Servoing Auto-Fastening System</h3>
+                    <p>CAD-free robotic bolt fastening on parts moving on a conveyor, driven by single-demonstration pose estimation; 14.5&rarr;21&nbsp;Hz vision stack and 60&rarr;100&nbsp;mm/s conveyor speed at 98% success</p>
+                    <a href="projects.html#visual-servoing" class="project-link">Learn More &rarr;</a>
                 </div>
                 <div class="project-card">
-                    <h3>Electromagnetic Scattering Simulations (CyScat.jl)</h3>
-                    <p>Translation of EM scattering simulation codebase from MATLAB to Julia/Python, with wavefront optimization via scattering matrix eigen-channel analysis</p>
-                    <a href="projects.html#cyscat" class="project-link">Learn More &rarr;</a>
+                    <h3>Semantic LiDAR-SLAM with Language-Guided Navigation</h3>
+                    <p>Cartographer SLAM + Grounding DINO in ROS2/Gazebo; a persistent semantic map lets natural-language commands trigger Nav2 goals for zero-shot object-goal navigation</p>
+                    <a href="projects.html#semantic-slam" class="project-link">Learn More &rarr;</a>
                 </div>
                 <div class="project-card">
-                    <h3>Battery Aging Prediction with Seq2Seq Models</h3>
-                    <p>Attention-enhanced sequence-to-sequence models for battery capacity-fade trajectory prediction from early cycling data, with 2&ndash;5% MAPE</p>
-                    <a href="projects.html#aging-prediction" class="project-link">Learn More &rarr;</a>
+                    <h3>VLA Model Fine-tuning for Robot Manipulation</h3>
+                    <p>LoRA fine-tuning of OpenVLA (7B vision-language-action model) on LIBERO manipulation benchmarks; deployed on UMich HPC (NVIDIA A40), training loss 19.08&rarr;1.16</p>
+                    <a href="projects.html#openvla" class="project-link">Learn More &rarr;</a>
                 </div>
             </div>
             <div class="cta-center">
@@ -247,14 +242,18 @@
     <section class="section" style="background: var(--bg-secondary);">
         <div class="container">
             <h2 class="section-title">Relevant Coursework</h2>
-            <div class="research-grid" style="max-width:700px; margin:0 auto;">
+            <div class="research-grid" style="max-width:900px; margin:0 auto;">
                 <div class="research-card">
-                    <h3 style="font-size:1.1rem;">ECE 551</h3>
-                    <p>Matrix Methods for Machine Learning and Signal Processing</p>
+                    <h3 style="font-size:1.1rem;">Robotics</h3>
+                    <p>Intro to Algorithmic Robotics (EECS&nbsp;465), Mobile Robotics (ROB&nbsp;530), Advanced Multi-Robot Systems (ROB&nbsp;516), 3D Robot Perception (ROB&nbsp;599)</p>
                 </div>
                 <div class="research-card">
-                    <h3 style="font-size:1.1rem;">ECE 501</h3>
-                    <p>Probability and Random Processes</p>
+                    <h3 style="font-size:1.1rem;">Machine Learning &amp; Vision</h3>
+                    <p>Machine Learning (EECS&nbsp;553), Advanced Topics in Computer Vision (EECS&nbsp;542), Matrix Methods for ML &amp; Signal Processing (ECE&nbsp;551), Imaging &amp; Advanced Machine Learning (BIOINF&nbsp;590)</p>
+                </div>
+                <div class="research-card">
+                    <h3 style="font-size:1.1rem;">Foundations</h3>
+                    <p>Probability &amp; Random Processes (ECE&nbsp;501), Computational &amp; Data-Driven Methods in Engineering (MECHENG&nbsp;599), Medical Imaging Systems (ECE&nbsp;516)</p>
                 </div>
             </div>
         </div>
@@ -263,7 +262,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Thirulok Sundar Mohan Rasu. Last updated: March 2026</p>
+            <p>&copy; 2026 Thirulok Sundar Mohan Rasu. Last updated: August 2026</p>
             <div class="footer-links">
                 <a href="mailto:thirulok@umich.edu"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/Thiruloksundar" target="_blank"><i class="fab fa-github"></i></a>
