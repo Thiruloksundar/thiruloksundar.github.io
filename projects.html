@@ -42,39 +42,6 @@
     <section class="section">
         <div class="container">
 
-            <!-- Robot Manipulation -->
-            <div class="category-section" id="visual-servoing">
-                <h2 class="category-title">
-                    <span class="category-icon"><i class="fas fa-robot" style="font-size:1.8rem;color:var(--primary-color)"></i></span> Robot Manipulation &amp; Visual Servoing
-                </h2>
-
-                <div class="project-detailed">
-                    <div class="project-detailed-header">
-                        <h3>CAD-Free Auto-Fastening via Single-Demonstration Visual Servoing</h3>
-                        <span class="project-status">Mowito &mdash; Industry</span>
-                    </div>
-                    <p class="project-description">
-                        Enhanced the full software stack for a visual-servoing-based auto-fastening system that derives target bolt poses from a <strong>single human demonstration</strong>, removing the need for a CAD model and enabling robotic fastening on parts moving continuously on a conveyor. The system was demonstrated live to investors, customers, and integrators.
-                    </p>
-                    <ul style="color: var(--text-secondary); margin: -0.5rem 0 1rem 1.5rem; line-height: 1.8;">
-                        <li><strong>Robust pose estimation:</strong> added a detector-free, semi-dense matching method plus a real-time tracker so pose estimates survive occlusion and low-texture parts; raised vision-stack throughput from <strong>14.5&nbsp;Hz to 21&nbsp;Hz</strong> using compressed image transport</li>
-                        <li><strong>Camera-mount optimization in Isaac Sim:</strong> a rendering-and-scoring pipeline that evaluates candidate camera mounts across CAD parts spanning 90&ndash;565&nbsp;mm with multi-plane bolts, using a staged search over <strong>1,000 candidates</strong> to converge on one robust mount pose given part classification (size, access area, bolt spacing)</li>
-                        <li><strong>Controller tuning:</strong> tuned the MPC controller and implemented automatic weight tuning via <strong>preferential Bayesian optimization</strong> over 30 bolt positions, cutting mean settle time from 4.17&nbsp;s to 2.67&nbsp;s (31% reduction) on a FANUC arm</li>
-                        <li><strong>Throughput:</strong> extended working conveyor speed from 60 to 100&nbsp;mm/s on a UR10e, cutting cycle time up to <strong>5.9&times;</strong> (21.3&nbsp;s &rarr; 3.6&nbsp;s) while holding <strong>98% success across 150 runs</strong></li>
-                        <li><strong>Platform port:</strong> ported the stack to a FANUC CRX10iA-L, resolving driver-level jerk instability to sustain a continuous 159-cycle run, and authored a state machine for multi-plane fastening (bolts on multiple faces) reaching <strong>95% success across 200 runs</strong></li>
-                    </ul>
-                    <div class="project-tech">
-                        <span class="tech-badge">Visual Servoing</span>
-                        <span class="tech-badge">6D Pose Estimation</span>
-                        <span class="tech-badge">Model Predictive Control</span>
-                        <span class="tech-badge">Preferential Bayesian Optimization</span>
-                        <span class="tech-badge">Isaac Sim</span>
-                        <span class="tech-badge">ROS2</span>
-                        <span class="tech-badge">FANUC / UR10e</span>
-                    </div>
-                </div>
-            </div>
-
             <!-- Imitation Learning & VLAs -->
             <div class="category-section" id="imitation-learning">
                 <h2 class="category-title">

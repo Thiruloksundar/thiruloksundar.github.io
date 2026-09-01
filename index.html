@@ -55,10 +55,10 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p class="intro-text">
-                    I am a Master's student in Electrical and Computer Engineering (Computer Vision) at the <strong>University of Michigan, Ann Arbor</strong>. I build <strong>robotics software, perception, and machine learning systems</strong> for real-world robots &mdash; visual servoing and pose estimation for industrial manipulation, imitation learning and vision-language-action policies for robot arms, SLAM with language-guided navigation, and world models for long-horizon planning.
+                    I am a Master's student in Electrical and Computer Engineering (Computer Vision) at the <strong>University of Michigan, Ann Arbor</strong>. I build <strong>robotics software, perception, and machine learning systems</strong> for real-world robots &mdash; imitation learning and vision-language-action policies for robot arms, SLAM with language-guided navigation, and world models for long-horizon planning.
                 </p>
                 <p>
-                    Most recently I was a <strong>Robotics Software Intern at Mowito</strong>, where I built a visual-servoing auto-fastening stack that derives target poses from a single demonstration &mdash; enabling CAD-free robotic bolt fastening on parts moving on a conveyor &mdash; and deployed it on FANUC and UR10e arms. As a <strong>Graduate Research Assistant</strong> at UMich I work on JEPA-based world models for planning, and previously at <strong>Carnegie Mellon University</strong> I trained multimodal audio-language models for deepfake speech detection (under review at Interspeech 2026). My B.Tech is in Electrical Engineering from <strong>IIT (ISM) Dhanbad</strong>.
+                    As a <strong>Graduate Research Assistant</strong> at UMich I work on JEPA-based world models for planning, and previously at <strong>Carnegie Mellon University</strong> I trained multimodal audio-language models for deepfake speech detection (under review at Interspeech 2026). My B.Tech is in Electrical Engineering from <strong>IIT (ISM) Dhanbad</strong>.
                 </p>
                 <p>
                     I graduate in <strong>December 2026</strong> and am looking for <strong>full-time robotics software, perception, and ML engineering roles</strong> &mdash; ideally where research ideas get shipped onto real hardware.
@@ -74,8 +74,8 @@
             <div class="research-grid">
                 <div class="research-card">
                     <div class="research-icon"><i class="fas fa-robot" style="font-size:2.5rem;color:var(--primary-color)"></i></div>
-                    <h3>Robot Manipulation &amp; Visual Servoing</h3>
-                    <p>Pose estimation from a single demonstration, detector-free semi-dense matching and real-time tracking, MPC tuning via preferential Bayesian optimization, and Isaac Sim camera-placement optimization for CAD-free robotic fastening</p>
+                    <h3>Robot Perception &amp; State Estimation</h3>
+                    <p>Instance segmentation and object detection for warehouse robots, multi-view 3D scene reconstruction, LiDAR-based state estimation, and 3D perception pipelines in ROS2</p>
                 </div>
                 <div class="research-card">
                     <div class="research-icon"><i class="fas fa-brain" style="font-size:2.5rem;color:var(--primary-color)"></i></div>
@@ -102,14 +102,6 @@
             <h2 class="section-title">Recent Updates</h2>
             <div class="news-timeline">
                 <div class="news-item">
-                    <span class="news-date">Aug 2026</span>
-                    <p>Wrapped up my <strong>Robotics Software Internship at Mowito</strong> &mdash; shipped visual-servoing auto-fastening on FANUC CRX10iA-L and UR10e arms</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">May 2026</span>
-                    <p>Started as <strong>Robotics Software Intern at Mowito</strong>, working on visual-servoing-based CAD-free robotic fastening</p>
-                </div>
-                <div class="news-item">
                     <span class="news-date">Jan 2026</span>
                     <p>Joined UMich research on <strong>JEPA-based world models</strong> for planning and differentiable electromagnetic-scattering simulation (Prof. Raj Rao Nadakuditi); released the <strong>freegaussianizer</strong> open-source package</p>
                 </div>
@@ -130,25 +122,6 @@
         <div class="container">
             <h2 class="section-title">Experience</h2>
             <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3>Robotics Software Intern</h3>
-                            <p class="experience-org">Mowito</p>
-                        </div>
-                        <span class="experience-date">May 2026 &ndash; Aug 2026</span>
-                    </div>
-                    <p class="experience-desc">Enhanced the full software stack for a visual-servoing-based auto-fastening system that derives target poses from a single demonstration, enabling CAD-free robotic bolt fastening on parts moving on a conveyor; demonstrated the system to investors, customers, and integrators. Added a detector-free semi-dense matching method and a real-time tracker so pose estimation stays robust through occlusion and low-texture parts, raising vision-stack throughput from 14.5&nbsp;Hz to 21&nbsp;Hz via compressed image transport. Built an Isaac Sim camera-mount pose optimization pipeline that renders and scores candidate mounts across CAD parts (90&ndash;565&nbsp;mm) with multi-plane bolts via staged search over 1,000 candidates. Tuned the MPC controller with automatic weight tuning via preferential Bayesian optimization across 30 bolt positions, cutting mean settle time from 4.17&nbsp;s to 2.67&nbsp;s (31%) on a FANUC arm. Extended working conveyor speed from 60 to 100&nbsp;mm/s on a UR10e, cutting cycle time up to 5.9&times; (21.3&nbsp;s to 3.6&nbsp;s) while holding 98% success across 150 runs. Ported the stack to a FANUC CRX10iA-L, resolving driver-level jerk instability to sustain a continuous 159-cycle run, and authored a state machine for multi-plane fastening reaching 95% success across 200 runs.</p>
-                    <div class="experience-tags">
-                        <span class="tag">Visual Servoing</span>
-                        <span class="tag">Pose Estimation</span>
-                        <span class="tag">MPC</span>
-                        <span class="tag">Bayesian Optimization</span>
-                        <span class="tag">Isaac Sim</span>
-                        <span class="tag">ROS2</span>
-                    </div>
-                </div>
-
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
@@ -211,9 +184,9 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Visual-Servoing Auto-Fastening System</h3>
-                    <p>CAD-free robotic bolt fastening on parts moving on a conveyor, driven by single-demonstration pose estimation; 14.5&rarr;21&nbsp;Hz vision stack and 60&rarr;100&nbsp;mm/s conveyor speed at 98% success</p>
-                    <a href="projects.html#visual-servoing" class="project-link">Learn More &rarr;</a>
+                    <h3>SO-101 Robot Arm &mdash; Imitation Learning</h3>
+                    <p>An ACT (Action Chunking with Transformers) policy trained on teleoperated demonstrations collected through HuggingFace LeRobot, driving screwdriver pick-and-place from a single front-facing camera</p>
+                    <a href="projects.html#imitation-learning" class="project-link">Learn More &rarr;</a>
                 </div>
                 <div class="project-card">
                     <h3>Semantic LiDAR-SLAM with Language-Guided Navigation</h3>
